@@ -1,5 +1,7 @@
 # Verified results — v0.4
 
+P12 closeout by **Chris Miki**: [paper-style PDF](output/pdf/P12_Chris_Miki.pdf), [editable LaTeX](reports/P12_Chris_Miki.tex).
+
 The full committed design C(10000001,30000000,10000) is complete. All 40 chunks
 were independently enumerated by both C engines and accepted by the Python
 and C factor checkers. The subsequent artifact audit verified coverage,
@@ -17,7 +19,7 @@ Prediction commit: `0a3a73847f3f533dae5fcface0c0abd5099801cb`.
 
 The primary design is the union of the first two rows; these are overlapping
 reports of one run, not three independent replications. The extension was
-preregistered but is not an operator-sealed vault. External operator confirmation of the original region 2 sealed hash is pending.
+preregistered but is not an operator-sealed vault. The external operator reports an exact region 2 census hash and four-cell match. This is a user-relayed attestation; the original withheld file was not inspected locally. The operator did not receive the prediction fingerprint before computation, so prediction-first chronology has local Git evidence but no independent pre-run receipt.
 
 | Law | Full primary composite deviance | Gain over N0 | Threshold 14 met |
 |---|---:|---:|---|

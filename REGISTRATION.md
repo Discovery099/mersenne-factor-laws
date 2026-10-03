@@ -87,3 +87,19 @@ in `runs/Vault_S2_full/progress.json` and appears under `vault_full_design` in
 `python -m ops.supervisor status`. It executes at most two native engines at
 once and retains independent per-engine checkpoints and verification records.
 The source and prediction hashes remain frozen throughout this execution.
+
+## External review and chronology qualification
+
+The completed region 2 census and four reported cells were confirmed against
+the operator's withheld values in a subsequent user-relayed message. The record
+is `data/sources/Vault_S2_operator_confirmation_2026-10-03.json`; SOURCE.md
+describes its provenance. It is a later outcome confirmation, not a pre-run
+timestamp. The operator reports that the prediction SHA was not relayed to
+them before computation. The local commit/run ordering remains auditable, but
+an externally witnessed prediction-first protocol was not fully completed.
+
+For any future sealed test, send the exact prediction fingerprint, scope and
+scoring rule to the independent custodian and obtain a dated receipt before
+computing. Delivery only in this agent chat or elapsed time is not that receipt.
+The frozen registration code checks local provenance; it cannot certify an
+external receipt. No further P12 census is scheduled as part of this closeout.

@@ -70,6 +70,24 @@ Novelty state: **overlap-found**. This is not an expert-reviewed distinction.
     explanation and sigma estimates are attributed external commentary, not
     independently checked results. None entered the frozen predictions.
     The user subsequently explicitly authorized the full committed design.
+16. [External region 2 operator confirmation](data/sources/REVIEW_VAULT_S2_operator_2026-10-03.md).
+    The user relayed an exact match to the withheld census hash and all four
+    reported cells: 250614 factors, 206852 exponents with >=1, 38568 with >=2,
+    and maximum 5. The [machine-readable record](data/sources/Vault_S2_operator_confirmation_2026-10-03.json)
+    pins this record's bytes and binds
+    the attestation to the local census. The original withheld file and the
+    operator's identity were not independently inspected. The operator also
+    reports that the prediction fingerprint was not received before computation:
+    local Git chronology is preserved, but external pre-run timestamping was
+    missed. This qualification supersedes any stronger reading of item 15.
+17. **Closeout literature recheck (2026-10-03).** Wagstaff (1983), page 387,
+    equation (4), already uses the product of no-factor probabilities; the
+    surrounding discussion distinguishes small-factor behavior from a Poisson
+    approximation. Read in the primary-paper mirror linked in item 2. This is
+    direct prior overlap with the zero-count part of L003, not merely a general
+    precedent for Poisson modeling. The report distinguishes the project's L001
+    Poisson implementation from Wagstaff's full treatment. The PDF text was
+    available; a fresh page-image fetch was blocked by the mirror's challenge.
 
 ## Access restrictions and missing live measurements
 

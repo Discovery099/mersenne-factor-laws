@@ -1,0 +1,270 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Exact Mersenne Factor Censuses and a Finite Bernoulli Multiplicity Model},pdfauthor={Chris Miki}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\sha}[1]{{\scriptsize\ttfamily #1}\par}
+\title{Exact Mersenne Factor Censuses\\and a Finite Bernoulli Multiplicity Model}
+\author{Chris Miki}
+\date{3 October 2026 \quad\textnormal{--- P12 technical report}}
+\begin{document}
+\maketitle
+\begin{abstract}
+Two independent exhaustive programs found 487,025 prime-factor pairs
+for prime exponents $10{,}000{,}001\le p\le30{,}000{,}000$ and multipliers
+$k\le10{,}000$ in $q=2kp+1$. Independent checkers accepted every pair.
+An external operator, in a message relayed to the project, confirmed the
+original region 2 census hash and all four reported summary cells against
+withheld values. Replacing the project's Poisson multiplicity approximation
+by a zero-fit Poisson-binomial model improves the fixed composite score by
+35.487 on region 2 and 69.789 on the full design. Smaller residuals remain.
+This is a reproducible empirical confirmation of established heuristics, not
+a new law. Prediction-first ordering has local Git evidence, but the
+independent operator did not receive the prediction fingerprint before the run.
+\end{abstract}
+
+\section{Finite problem and exact computation}
+For prime $p$, let $M_p=2^p-1$ and define
+\[
+ I_{p,k}=\mathbf{1}\{q=2kp+1\text{ is prime and }q\mid M_p\},
+ \qquad J_p=\sum_{k=1}^{10{,}000}I_{p,k}.
+\]
+The census records each pair $(p,k)$ once. Its summaries are the number of
+pairs $C=\sum_pJ_p$, the numbers of exponents $A_j=\#\{p:J_p\ge j\}$
+for $j=1,2$, and the maximum $M=\max_pJ_p$. All exponent endpoints are inclusive.
+Region 2 is $[10{,}000{,}001,20{,}000{,}000]$; the extension is
+$[20{,}000{,}001,30{,}000{,}000]$. The full design is their union.
+
+\begin{center}\small
+\begin{tabular}{lrrrrr}
+\toprule
+Scope & Prime exponents & $C$ & $A_1$ & $A_2$ & $M$\\
+\midrule
+Region 2 & 606,028 & 250,614 & 206,852 & 38,568 & 5\\
+Extension & 587,252 & 236,411 & 196,136 & 35,665 & 6\\
+Full design & 1,193,280 & 487,025 & 402,988 & 74,233 & 6\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The two C programs enumerate in different loop orders and use different
+modular-arithmetic and sieving implementations. All 40 contiguous chunks
+agreed byte for byte. A fresh Python checker and an independent C checker
+verified each chunk's prime exponents, prime factors and divisibility.
+The final audit checked complete coverage, canonical sorted pairs, hashes,
+certificates, source provenance and an independent recount of the summary
+cells. These are bounded small-$k$ factor censuses, not counts of Mersenne
+primes or newly credited factor discoveries. Region 1 was not rerun.
+
+\section{Relationship to established work}
+Shanks and Kravitz studied Mersenne divisor counts indexed by $k$~\cite{sk}.
+Wagstaff gives the corresponding pair-weight heuristic, discusses limits of
+Poisson modeling, and already writes a product of no-factor probabilities
+on page 387, equation (4)~\cite{wagstaff}. Thus the correction below is to
+the project's \emph{L001 Poisson implementation}, not a refutation of
+Wagstaff's full treatment. Independent Bernoulli sums form the standard
+Poisson-binomial distribution~\cite{hong}.
+
+\newpage
+\section{Frozen models and prospective design}
+For admissible $k\equiv0$ or $-p\pmod4$, the shared L001/L003 pair mean is
+\begin{equation}
+ w_{p,k}=\frac{2C_2}{k\log(2kp)}
+ \prod_{\substack{r\mid k\\r>2\text{ prime}}}\frac{r-1}{r-2},
+ \qquad C_2=0.6601618158468696.
+\end{equation}
+Other $k$ have weight zero. These are heuristic means, not exact
+probabilities proved for Mersenne factors. Put $\mu_p=\sum_kw_{p,k}$.
+L001 uses $J_p\sim\mathrm{Poisson}(\mu_p)$, so
+$\E A_1=\sum_p(1-e^{-\mu_p})$ and
+$\E A_2=\sum_p[1-e^{-\mu_p}(1+\mu_p)]$.
+
+L003 instead models each candidate as one independent Bernoulli indicator,
+with generating function
+\begin{equation}
+ G_p(z)=\prod_{k=1}^{10{,}000}(1-w_{p,k}+w_{p,k}z),\qquad
+ P_{p,0}=G_p(0),\quad
+ P_{p,1}=P_{p,0}\sum_k\frac{w_{p,k}}{1-w_{p,k}}.
+\end{equation}
+It predicts $\E A_1=\sum_p(1-P_{p,0})$ and
+$\E A_2=\sum_p(1-P_{p,0}-P_{p,1})$ without fitted parameters.
+Its mean $\mu_p$ is unchanged; its variance is
+$\mu_p-\sum_kw_{p,k}^2$, explaining a finite-trial reduction from the
+Poisson variance. Assuming independence across exponents, with $F_p$ the
+per-exponent cumulative distribution,
+\begin{equation}
+ \E M=\sum_{j\ge0}\left(1-\prod_p F_p(j)\right).
+\end{equation}
+Coefficient recursion through degree 24, tail bounds, direct small examples
+and 24/32-node interpolation comparisons checked numerical accuracy before
+commitment. Independence within and across exponents remains an assumption.
+
+The other frozen comparators are N0, a small-prime-sieved pair heuristic,
+and L002, N0 multiplied by fixed local correction factors for primes
+$53\le r\le997$. Both use Poisson multiplicities; neither fits the observed
+counts. Exact definitions and source hashes accompany the prediction file.
+
+The registered score is the composite deviance
+\begin{equation}
+ D(y,\nu)=\sum_c 2\left(\nu_c-y_c+y_c\log\frac{y_c}{\nu_c}\right),
+\end{equation}
+with the usual zero-count limit. The cells are total factors, 14 dyadic
+$k$ buckets, all residues modulo $3,4,5,8,12$, $A_1$, $A_2$, and $M$ once.
+They overlap, so this is not an independent likelihood ratio or a calibrated
+significance test. A lower score by at least 14 is the fixed comparison rule.
+
+Before commitment, each pair of laws was checked in both truth directions.
+If means are $a_c$ and $b_c$, the expected gain of $a$ over $b$ when $a$ is
+true is $2\sum_c[b_c-a_c+a_c\log(a_c/b_c)]$. This identity requires the
+stated means, not independent cells. The threshold is an expected-separation
+criterion, not an 80\% power calculation.
+
+N0/L002 gave only 10.473/10.464 on region 2, below 14, prompting the
+pre-run extension. On the full design N0/L002 gives 20.342/20.324 and
+L001/L003 gives 34.593/34.478; all six primary pairs pass in both directions.
+The original region 2 is retained as a separate sealed scope. The extension
+has no operator seal, and the union is not an independent replication.
+
+\newpage
+\section{Results and the remaining discrepancy}
+L001 and L003 have identical factor-count expectations; they differ only
+in multiplicities. Predicted maxima below are expectations, not modal values.
+
+\begin{center}\small
+\begin{tabular}{llrrr}
+\toprule
+Scope & Cell & Observed & L001 & L003\\
+\midrule
+Region 2 & Factors & 250,614 & 250,537.121 & 250,537.121\\
+ & $A_1$ & 206,852 & 205,109.160 & 206,220.258\\
+ & $A_2$ & 38,568 & 39,559.378 & 38,876.164\\
+ & $M$ & 5 & 6.130 & 5.993\\
+\addlinespace
+Full design & Factors & 487,025 & 487,437.086 & 487,437.086\\
+ & $A_1$ & 402,988 & 399,965.073 & 402,101.603\\
+ & $A_2$ & 74,233 & 76,295.240 & 74,972.029\\
+ & $M$ & 6 & 6.297 & 6.174\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}\small
+\begin{tabular}{lrrr}
+\toprule
+Law & Region 2 deviance & Full-design deviance & Full gain over N0\\
+\midrule
+N0 & 312.613 & 582.214 & ---\\
+L001 & 76.930 & 97.667 & 484.547\\
+L002 & 299.532 & 538.633 & 43.581\\
+L003 & 41.442 & 27.879 & 554.336\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+All three laws beat N0 by the prescribed criterion on the powered full
+design. L003 beats L001 by 35.487 on region 2 and 69.789 on the full design.
+Their multiplicity-only deviances fall from 40.044 to 4.557 and from 79.055
+to 9.266, respectively. The factor-count contributions cancel in this
+contrast. L002's region 2 gain over N0 is 13.082 and that comparison remains
+underpowered; there is no standalone passing verdict for it.
+
+The L003 residuals retain the same direction in the two disjoint bands:
+\begin{center}\small
+\begin{tabular}{lrr}
+\toprule
+Scope & $A_1-\E_{\mathrm{L003}}A_1$ & $A_2-\E_{\mathrm{L003}}A_2$\\
+\midrule
+Region 2 & $+631.742$ & $-308.164$\\
+Extension & $+254.654$ & $-430.865$\\
+Full design & $+886.397$ & $-739.029$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The combined residual is the sum of the two regional residuals, not a third
+independent observation. These targets count \emph{at least} one and two
+factors. The exactly-one count is their difference; an exactly-two
+discrepancy is not determined from these two cells alone.
+
+Relative to observed full-design counts, L003's signed prediction errors
+are $+0.0846\%$ for total factors, $-0.2200\%$ for $A_1$ and $+0.9956\%$
+for $A_2$. Thus accuracy of 0.1--0.3\% is not a uniform description of all
+cells. The finite Bernoulli model explains much of the original discrepancy,
+but does not remove it. Reviewer-supplied sigma estimates are not treated
+as calibrated tests: their covariance calculation was not supplied, and the
+registered composite statistic supplies no such calibration. These results
+establish neither a new arithmetic repulsion law nor that every residual
+is ordinary noise. No model was refitted after these outcomes were seen.
+
+\newpage
+\section{Sealed comparison, provenance and closeout}
+The local record places the prediction commit at 18:40:13 UTC on
+3 October 2026, before the census started at approximately 18:59 UTC.
+The user authorized the full committed design after fingerprint delivery
+in this chat. The fixed prediction file, scoring rule, source hashes and
+prospective design remain unchanged. The completed evidence was saved in
+Git commit \texttt{b1540d0}; the prediction commit is
+\texttt{0a3a73847f3f533dae5fcface0c0abd5099801cb}.
+
+The later user-relayed operator confirmation states that region 2's
+250,614 factors, $A_1=206{,}852$, $A_2=38{,}568$, maximum 5 and census
+hash exactly match the withheld values. This is attributed external
+corroboration: the local agent did not inspect the original withheld file
+or independently establish the operator's identity. An earlier region 1
+hash match was also reported, but its named review document remains
+unavailable and region 1 was not recomputed for this work.
+
+\textbf{Protocol qualification.} The operator reports that the prediction
+fingerprint was \emph{not} relayed to them before computation. Therefore
+prediction-first ordering is supported by local Git and execution records,
+not an independently witnessed pre-run receipt. The later outcome match
+does not repair that missing timestamp. A future sealed comparison should
+obtain a dated custodian receipt for the exact prediction fingerprint,
+bounds and scoring rule before enumeration.
+
+\textbf{SHA-256 fingerprints.} Canonical census files contain sorted ASCII
+\texttt{p k} rows with LF endings. The two regional files concatenate to
+the full-design file.
+
+Prediction file:\[-0.6em]
+\sha{a4fb571f0c65367afec4b02d58dd5b5c6bc269bb252bb2ff4c3c17f40483d641}
+Region 2 census:\[-0.6em]
+\sha{4cd1542dbe1264ef0510b43bc165cc1a761ef24b3e42ba65118406e65bde5415}
+Extension census:\[-0.6em]
+\sha{57e1388a33a8e248154ffedbc83ce229cb5fba90c35729fcad6d7783716f7c94}
+Full-design census:\[-0.6em]
+\sha{478aef5d3b6d09952fddef0189dc985ecec117f7ddff41c3769307ff8e9c577b}
+
+The repository retains raw outputs from both engines, certificates, forecasts,
+score tables and the attributed review in \texttt{data/sources/}.
+\texttt{python -m ops.vault\_report} audits saved evidence and recomputes
+the frozen scores without another census. Recorded native engine work was
+1.023741 CPU-hours; checkers, prediction, aggregation and other overhead
+are excluded.
+
+\textbf{Conclusion.} This bounded P12 comparison is closed as an empirical
+confirmation with a documented residual and a documented provenance
+limitation. It makes no new-theorem, new-law or credited-factor claim.
+The observed bands must not be reused as fresh tests of a revised model.
+
+{\small Computational implementation, orchestration and drafting were assisted
+by OpenAI Codex. External confirmation is recorded as relayed operator testimony.}
+
+\begin{thebibliography}{9}\small
+\bibitem{sk} D. Shanks and S. Kravitz, \emph{On the Distribution of Mersenne
+Divisors}, Mathematics of Computation \textbf{21} (1967).
+\href{https://t5k.org/mersenne/literature/shanksKravitz.html}{Primary-paper transcription}.
+\bibitem{wagstaff} S. S. Wagstaff, Jr., \emph{Divisors of Mersenne Numbers},
+Mathematics of Computation \textbf{40} (1983), 385--397.
+\href{https://doi.org/10.1090/S0025-5718-1983-0679454-X}{doi:10.1090/S0025-5718-1983-0679454-X}.
+\bibitem{hong} Y. Hong, \emph{On computing the distribution function for the
+Poisson binomial distribution}, Computational Statistics \& Data Analysis
+\textbf{59} (2013), 41--51.
+\href{https://doi.org/10.1016/j.csda.2012.10.006}{doi:10.1016/j.csda.2012.10.006}.
+\end{thebibliography}
+\end{document}

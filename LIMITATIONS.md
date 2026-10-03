@@ -35,7 +35,9 @@
    design; broader bounds still need numerical and resource checks.
 8. Local Git/file timestamps can be rewritten by a malicious operator. The
    audit blocks accidental ordering violations; independent operator custody
-   or external timestamping is needed for stronger guarantees.
+   or external timestamping is needed for stronger guarantees. For this test,
+   the operator explicitly reports no pre-run receipt of the prediction hash;
+   the later outcome confirmation does not supply that missing timestamp.
 9. GIMPS report routes and mersenne.ca status/factor routes restrict automated
    access. Current total factors, daily discovery rate and P-1/ECM wavefronts
    remain unverified pending dated operator exports. None are invented.

@@ -134,6 +134,35 @@
     "runs\\Vault_S2_full\\sealed_region_2\\summary_cells.json": "3dd0bffa568fd70ab89e95a1b74318c5ae91b3bb06266540bbb9ea8f88fc28a1"
   },
   "engine_cpu_seconds": 3685.46875,
+  "external_review": {
+    "attestation": {
+      "bounds": [
+        10000001,
+        20000000,
+        10000
+      ],
+      "confirmed_cells": {
+        "at_least_one": 206852,
+        "at_least_two": 38568,
+        "maximum": 5,
+        "total": 250614
+      },
+      "external_prediction_receipt_before_computation": false,
+      "kind": "user-relayed-external-operator-attestation",
+      "operator_identity_independently_verified": false,
+      "operator_reports_exact_hash_match": true,
+      "prediction_sha256": "a4fb571f0c65367afec4b02d58dd5b5c6bc269bb252bb2ff4c3c17f40483d641",
+      "recorded_at": "2026-10-03T22:06:48.707684+00:00",
+      "reference_census_sha256": "4cd1542dbe1264ef0510b43bc165cc1a761ef24b3e42ba65118406e65bde5415",
+      "schema": 1,
+      "source_path": "data/sources/REVIEW_VAULT_S2_operator_2026-10-03.md",
+      "source_sha256": "1c7a7e4df12a85ce36d470af4f1995059e632668428d0fb69d0c3a42616c9083",
+      "withheld_file_independently_inspected": false
+    },
+    "path": "data\\sources\\Vault_S2_operator_confirmation_2026-10-03.json",
+    "scope": "region 2 only; attributed operator statement, not independent inspection of withheld data",
+    "sha256": "6e410fa7b42aebec9e9c7fece95838681a37676b5fe34a0b3adcf892832b81e5"
+  },
   "records": {
     "enlarged_design": {
       "observed": {
@@ -4582,6 +4611,6 @@
     "prediction_sha256": "a4fb571f0c65367afec4b02d58dd5b5c6bc269bb252bb2ff4c3c17f40483d641"
   },
   "start_head": "baec1b8da9ecbe08ed14f9c94b27422207407ab5",
-  "status": "local dual-engine, dual-checker census; operator sealed confirmation pending",
-  "verified_at": "2026-10-03T20:35:41.842249+00:00"
+  "status": "local dual-engine, dual-checker census; Region 2 census hash and four reported cells match the withheld values, according to the user-relayed external operator confirmation.",
+  "verified_at": "2026-10-03T22:09:55.952903+00:00"
 }

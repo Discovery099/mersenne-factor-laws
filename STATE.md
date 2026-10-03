@@ -1,4 +1,4 @@
-# State — v0.4 full committed design complete
+# State — P12 bounded experiment closed
 
 2026-10-03T20:33:12.883594+00:00
 Prediction: predictions/Vault_S2_L001_L002_L003.json
@@ -12,7 +12,7 @@ See RESULTS.md and results/Vault_S2_full/RESULTS.md for counts and frozen scores
 
 Primary L003 gain over L001: 69.788577, threshold 14.
 Original region 2 L003 gain over L001: 35.487328.
-External operator confirmation of the original region 2 sealed hash is pending.
+The external operator reports an exact region 2 census hash and four-cell match. This is a user-relayed attestation; the original withheld file was not inspected locally. The operator did not receive the prediction fingerprint before computation, so prediction-first chronology has local Git evidence but no independent pre-run receipt.
 The supplementary band is not operator sealed. Local Git chronology is an
 audit trail, not an independent timestamp. The composite score is not a p-value.
 
@@ -39,3 +39,12 @@ fixture passing its targeted rerun, plus 4 runner and 1 report tests passed.
 Recorded native engine work: 1.023741 CPU-hours; overhead/checkers excluded.
 Audit saved evidence with python -m ops.vault_report. The older ops.verify
 deliberately re-enumerates all certificates and is substantially more expensive.
+
+## Closeout report
+
+Author: Chris Miki. Report: output/pdf/P12_Chris_Miki.pdf. Editable source: reports/P12_Chris_Miki.tex.
+External review: data/sources/Vault_S2_operator_confirmation_2026-10-03.json. SOURCE.md records the exact provenance.
+The two closeout report tests pass, including rejection of a mismatched external attestation.
+No further P12 census, model fitting, P15 experiment or market action was launched.
+The built-in LaTeX compiler failed at host setup; a separately typeset ReportLab PDF is provided.
+The missing original seed/review files remain unresolved legacy inputs, not claimed completed work.

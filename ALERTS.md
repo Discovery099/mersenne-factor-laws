@@ -1,5 +1,13 @@
 # Alerts
 
+## P12 closeout and external region 2 confirmation — 2026-10-03
+
+The external operator reports an exact region 2 census hash and four-cell match. This is a user-relayed attestation; the original withheld file was not inspected locally. The operator did not receive the prediction fingerprint before computation, so prediction-first chronology has local Git evidence but no independent pre-run receipt.
+
+All source, forecast, census and score artifacts remain unchanged. The finite Bernoulli
+model wins the prescribed comparison but leaves smaller residuals. No discovery is claimed.
+Report author: Chris Miki. PDF: output/pdf/P12_Chris_Miki.pdf. No further computation was launched.
+
 ## Vault-S full committed design completed — 2026-10-03
 
 All 40 chunks and the final audit passed. See results/Vault_S2_full/RESULTS.md.

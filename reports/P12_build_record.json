@@ -1,0 +1,21 @@
+{
+  "audit_sha256": "570d72270d4c919a3e3d1b375243bb1646b5016e2a444ca50611522f7a0409c0",
+  "author": "Chris Miki",
+  "checks": {
+    "all_four_fingerprints_in_pdf": true,
+    "author_metadata": true,
+    "frozen_sources_and_experiment_artifacts_unchanged": true,
+    "key_numeric_results_in_pdf": true,
+    "page_count": 4,
+    "text_within_page_bounds": true
+  },
+  "companion_latex_sha256": "104a17145d2bbe77ce52d099db4431fe4b81943277550f67c55624c4ad3b3c29",
+  "latex_compilation": "unavailable: built-in host could not find standard directories",
+  "pages": 4,
+  "pdf": "output\\pdf\\P12_Chris_Miki.pdf",
+  "pdf_backend": "ReportLab",
+  "pdf_sha256": "890c60e865f715e26aebea374661da4f1ca2f1519514afdaac1016026b66aa03",
+  "prediction_sha256": "a4fb571f0c65367afec4b02d58dd5b5c6bc269bb252bb2ff4c3c17f40483d641",
+  "reviewed_at": "2026-10-03T22:18:46.626061+00:00",
+  "visual_review": "passed: all four Poppler-rendered pages inspected"
+}

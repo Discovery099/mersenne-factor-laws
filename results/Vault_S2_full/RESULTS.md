@@ -3,7 +3,13 @@
 The fixed prediction SHA-256 is `a4fb571f0c65367afec4b02d58dd5b5c6bc269bb252bb2ff4c3c17f40483d641`.
 Prediction commit: `0a3a73847f3f533dae5fcface0c0abd5099801cb`.
 Both independent engines agree on every chunk. Both factor checkers accepted every pair.
-Region 1 was not rerun. Operator comparison with the original sealed region 2 hash is pending.
+Region 1 was not rerun. Region 2 census hash and four reported cells match the withheld values, according to the user-relayed external operator confirmation.
+
+The original withheld file and operator identity were not independently inspected.
+The operator reports that the prediction fingerprint was not received before computation.
+Prediction-first ordering has local Git evidence, but no independently witnessed pre-run timestamp.
+The supplementary band has no operator seal. Historical scorer/certificate metadata is unchanged;
+the later external confirmation is recorded separately in `data/sources/`.
 
 ## Original sealed region 2
 

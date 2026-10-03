@@ -26,6 +26,25 @@ def recount_cells(pairs, K):
     return cells
 
 
+def operator_review(path, region, prediction_sha256):
+    """Bind an attributed external attestation to the already-audited local result."""
+    if not path.exists(): return None
+    review=json.loads(path.read_text(encoding='utf-8'))
+    if review.get('schema')!=1 or review.get('kind')!='user-relayed-external-operator-attestation':
+        raise ValueError('unknown external review schema')
+    source=(ROOT/review['source_path']).resolve()
+    source.relative_to(ROOT.resolve())
+    if digest(source)!=review['source_sha256']: raise ValueError('external review source changed')
+    expected={k:region['observed'][k] for k in ('total','at_least_one','at_least_two','maximum')}
+    if (review['bounds']!=region['output']['bounds'] or
+        review['reference_census_sha256']!=region['output']['sha256'] or
+        review['confirmed_cells']!=expected or review['prediction_sha256']!=prediction_sha256 or
+        review['operator_reports_exact_hash_match'] is not True):
+        raise ValueError('external review does not match the local census and prediction')
+    return {'path':str(path.relative_to(ROOT)),'sha256':digest(path),'attestation':review,
+            'scope':'region 2 only; attributed operator statement, not independent inspection of withheld data'}
+
+
 def report(work=ROOT/'runs/Vault_S2_full'):
     prediction=ROOT/'predictions/Vault_S2_L001_L002_L003.json'
     registration=registered(prediction)
@@ -71,8 +90,14 @@ def report(work=ROOT/'runs/Vault_S2_full'):
             raise ValueError('independent recount differs from saved summary cells')
         records[label]={'output':output,'observed':cells['cells'],'predictions':scope['models'],
                         'scores':rescored['scores'],'power':scope['power']}
+    review=operator_review(ROOT/'data/sources/Vault_S2_operator_confirmation_2026-10-03.json',
+                           records['sealed_region_2'],registration['prediction_sha256'])
+    seal_status=('Region 2 census hash and four reported cells match the withheld values, according to '
+                 'the user-relayed external operator confirmation.' if review else
+                 'Operator comparison with the original sealed region 2 hash is pending.')
     proof={'verified_at':utcnow(),'registration':registration,'start_head':manifest['start_head'],
-           'status':'local dual-engine, dual-checker census; operator sealed confirmation pending',
+           'status':'local dual-engine, dual-checker census; '+seal_status,
+           'external_review':review,
            'records':records,'engine_cpu_seconds':manifest['engine_cpu_s'],
            'artifacts':{str(p.relative_to(ROOT)):digest(p) for p in work.rglob('*.json') if p.name not in ('progress.json',)}}
     target=ROOT/'results/Vault_S2_full';target.mkdir(parents=True,exist_ok=True)
@@ -81,7 +106,13 @@ def report(work=ROOT/'runs/Vault_S2_full'):
            'The fixed prediction SHA-256 is `'+registration['prediction_sha256']+'`.',
            'Prediction commit: `'+registration['prediction_commit']+'`.',
            'Both independent engines agree on every chunk. Both factor checkers accepted every pair.',
-           'Region 1 was not rerun. Operator comparison with the original sealed region 2 hash is pending.','']
+           'Region 1 was not rerun. '+seal_status,'']
+    if review:
+        lines += ['The original withheld file and operator identity were not independently inspected.',
+                  'The operator reports that the prediction fingerprint was not received before computation.',
+                  'Prediction-first ordering has local Git evidence, but no independently witnessed pre-run timestamp.',
+                  'The supplementary band has no operator seal. Historical scorer/certificate metadata is unchanged;',
+                  'the later external confirmation is recorded separately in `data/sources/`.','']
     labels={'sealed_region_2':'Original sealed region 2','extension':'Supplementary band (descriptive)','enlarged_design':'Enlarged primary design'}
     for label in ('sealed_region_2','enlarged_design','extension'):
         rec=records[label];out=rec['output'];bounds=out['bounds']

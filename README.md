@@ -1,5 +1,10 @@
 # Mersenne factor laws — Windows build v0.4
 
+The bounded P12 comparison is complete. [Chris Miki's closeout report](output/pdf/P12_Chris_Miki.pdf)
+records exact counts, the externally reported region 2 match, the missing
+external pre-run timestamp, model comparisons and residuals. Editable source:
+[reports/P12_Chris_Miki.tex](reports/P12_Chris_Miki.tex).
+
 Exact Python + C verification, independent exhaustive censuses, immutable
 certificates, preregistered predictions, and bounded resumable jobs.
 Built from the P12 brief, with the supplied v0.1/v0.2 sources inspected and
