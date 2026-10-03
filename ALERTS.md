@@ -1,5 +1,14 @@
 # Alerts
 
+## 2026-10-03 — C2 open demonstration, awaiting human review
+
+C(200001,210000,1000) has **312 factors**, independently enumerated and checked.
+Census SHA-256: 28029a76b0985fc978acda2baeee8c66dcdeeb58ffdc56ae668333c2cfd6f7cd.
+L002 does not beat N0: improvement 1.1391 < 14. This is a finite census result,
+not a new factor, validated growth law or operator-confirmed vault result.
+Prediction commit: d47690fe9303c28df9572b3442e93481b42d5b53.
+Claims and immutable evidence are in claims/ and certificates/.
+
 ## Preregistration L002_open_demo
 
 Bounds [200001, 210000, 1000]; law laws/L002.py; SHA-256 `c8c35b53f2e6e396e5218e5938dafaa8e7ed290123dce1172c4179432a0b3755`.

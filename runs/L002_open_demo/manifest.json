@@ -1,0 +1,262 @@
+{
+  "binaries": {
+    "census_kp": "cd5f44b26bbce4dfaa3ae751d9ce5a8a41f68bd8c49d68f4580be5ab20720911",
+    "census_pk": "e71e473017b74c695881ba169c815e965ec9251665ec69c76cdfbac9f4574c31",
+    "checker2": "d9c1ba917e4f1957389827e19cc07a36dbdd4869d4a5f6450eb1adc15f7a8e4b"
+  },
+  "bounds": [
+    200001,
+    210000,
+    1000
+  ],
+  "census_sha256": "28029a76b0985fc978acda2baeee8c66dcdeeb58ffdc56ae668333c2cfd6f7cd",
+  "commit_time": "2026-10-03T18:46:33+01:00",
+  "completed_at": "2026-10-03T17:47:03.253227+00:00",
+  "parts": [
+    {
+      "bounds": [
+        200001,
+        201000,
+        1000
+      ],
+      "count": 31,
+      "engines": [
+        {
+          "cpu_s": 0.015625,
+          "engine": "census_kp",
+          "wall_s": 0.03099999999994907
+        },
+        {
+          "cpu_s": 0.03125,
+          "engine": "census_pk",
+          "wall_s": 0.04699999999957072
+        }
+      ],
+      "path": "part_200001_201000.txt",
+      "sha256": "ba4fd6af7db4e1a7217fc6bd2120ee6124a30d78ad34813d945490a4f14a875a"
+    },
+    {
+      "bounds": [
+        201001,
+        202000,
+        1000
+      ],
+      "count": 34,
+      "engines": [
+        {
+          "cpu_s": 0.015625,
+          "engine": "census_kp",
+          "wall_s": 0.03099999999994907
+        },
+        {
+          "cpu_s": 0.03125,
+          "engine": "census_pk",
+          "wall_s": 0.04699999999957072
+        }
+      ],
+      "path": "part_201001_202000.txt",
+      "sha256": "2cf1e4efd36b6c1222f83c1df885a71d6863ad63af865237778a5cf687ad5976"
+    },
+    {
+      "bounds": [
+        202001,
+        203000,
+        1000
+      ],
+      "count": 31,
+      "engines": [
+        {
+          "cpu_s": 0.015625,
+          "engine": "census_kp",
+          "wall_s": 0.03099999999994907
+        },
+        {
+          "cpu_s": 0.03125,
+          "engine": "census_pk",
+          "wall_s": 0.04699999999957072
+        }
+      ],
+      "path": "part_202001_203000.txt",
+      "sha256": "f519977f0a72bf3b4f1ccf1c487f2bda55e31a7e14df194a6d64ef3a877ed4fe"
+    },
+    {
+      "bounds": [
+        203001,
+        204000,
+        1000
+      ],
+      "count": 23,
+      "engines": [
+        {
+          "cpu_s": 0.015625,
+          "engine": "census_kp",
+          "wall_s": 0.03099999999994907
+        },
+        {
+          "cpu_s": 0.03125,
+          "engine": "census_pk",
+          "wall_s": 0.032000000000152795
+        }
+      ],
+      "path": "part_203001_204000.txt",
+      "sha256": "d80a065340af84cd14c70581f49bf8563fe40822e2c29b565580e5b09affc78e"
+    },
+    {
+      "bounds": [
+        204001,
+        205000,
+        1000
+      ],
+      "count": 31,
+      "engines": [
+        {
+          "cpu_s": 0.015625,
+          "engine": "census_kp",
+          "wall_s": 0.046000000000276486
+        },
+        {
+          "cpu_s": 0.015625,
+          "engine": "census_pk",
+          "wall_s": 0.032000000000152795
+        }
+      ],
+      "path": "part_204001_205000.txt",
+      "sha256": "1b8d409c371643fd1e29d828c687bc590e2597e144d0a7118419ef8390f09ed4"
+    },
+    {
+      "bounds": [
+        205001,
+        206000,
+        1000
+      ],
+      "count": 42,
+      "engines": [
+        {
+          "cpu_s": 0.03125,
+          "engine": "census_kp",
+          "wall_s": 0.04699999999957072
+        },
+        {
+          "cpu_s": 0.03125,
+          "engine": "census_pk",
+          "wall_s": 0.07800000000042928
+        }
+      ],
+      "path": "part_205001_206000.txt",
+      "sha256": "a7bb72e0c6f780ae6f2c50694d29e0b9f0d3888ffc75a50b5e8b62b2fe4756b4"
+    },
+    {
+      "bounds": [
+        206001,
+        207000,
+        1000
+      ],
+      "count": 22,
+      "engines": [
+        {
+          "cpu_s": 0.0,
+          "engine": "census_kp",
+          "wall_s": 0.07800000000042928
+        },
+        {
+          "cpu_s": 0.046875,
+          "engine": "census_pk",
+          "wall_s": 0.06199999999989814
+        }
+      ],
+      "path": "part_206001_207000.txt",
+      "sha256": "393e417b40d6afaa9b824d61250a276d1d392f0418fcc928ab9ee08e04f966f0"
+    },
+    {
+      "bounds": [
+        207001,
+        208000,
+        1000
+      ],
+      "count": 35,
+      "engines": [
+        {
+          "cpu_s": 0.015625,
+          "engine": "census_kp",
+          "wall_s": 0.03099999999994907
+        },
+        {
+          "cpu_s": 0.03125,
+          "engine": "census_pk",
+          "wall_s": 0.04699999999957072
+        }
+      ],
+      "path": "part_207001_208000.txt",
+      "sha256": "3eb45eb948fca00ed60ead9d6dbb7fdd64c042361c05672cb5759601f3cdf84d"
+    },
+    {
+      "bounds": [
+        208001,
+        209000,
+        1000
+      ],
+      "count": 29,
+      "engines": [
+        {
+          "cpu_s": 0.015625,
+          "engine": "census_kp",
+          "wall_s": 0.03099999999994907
+        },
+        {
+          "cpu_s": 0.03125,
+          "engine": "census_pk",
+          "wall_s": 0.04699999999957072
+        }
+      ],
+      "path": "part_208001_209000.txt",
+      "sha256": "2a550666acc90f5a4ccbef9aec4d58433f1f4d0129456ed2f81dfa59a2f52b9e"
+    },
+    {
+      "bounds": [
+        209001,
+        210000,
+        1000
+      ],
+      "count": 34,
+      "engines": [
+        {
+          "cpu_s": 0.015625,
+          "engine": "census_kp",
+          "wall_s": 0.03099999999994907
+        },
+        {
+          "cpu_s": 0.03125,
+          "engine": "census_pk",
+          "wall_s": 0.04700000000048021
+        }
+      ],
+      "path": "part_209001_210000.txt",
+      "sha256": "22aaeeb280d630f7ecd74d2d736701fa33698bcf864a97e5c68f98be53a652a0"
+    }
+  ],
+  "prediction": "predictions/L002_open_demo.json",
+  "prediction_commit": "d47690fe9303c28df9572b3442e93481b42d5b53",
+  "prediction_sha256": "c8c35b53f2e6e396e5218e5938dafaa8e7ed290123dce1172c4179432a0b3755",
+  "seed": 12,
+  "sources": {
+    "laws/L002.py": "c7df984c280c8bb5ade7dc2e9c096ce8a4abd849cf90c3f6eced67c86ac7dc2c",
+    "mf/__init__.py": "ae3fea4ec95822b96a72b876ddccbc7053309990744205baf762f7367e748fe5",
+    "mf/census_kp.c": "24f6a66d114f4f8502ef260b6c272e0a8edeecbb35084e7d4196d5793e9327f6",
+    "mf/census_pk.c": "2885226bce90aecf4d5927916b1d8862921aea12f14b85f9965ae076dde15732",
+    "mf/checker.py": "d4223e09837915eb0845a682c5b805975255b0a9fc4e00cb52dd564454c5e8d6",
+    "mf/checker2.c": "114823495e89187dda549197601140887aa1a757fb5e17d49872d07ad7212e14",
+    "mf/null_n0.py": "5c3a785c8ec1d9bada721819ba7058159a8c79aecc2cc25d17201b059feb868c",
+    "mf/predict.py": "3aa22388bc4c7a1289308331985946e904a745ce439b6620cb28e35956e3f29b",
+    "mf/protocol.py": "30600361acb64d2002c7adfdac9d6164c5d72cf2bd4d192a5d0175cacaf16b59",
+    "mf/score.py": "39f81fa87da62ce933bc46e1e3da2491e70ad0e7b7dc48e5e232437c32c26ad7",
+    "mf/stats.py": "d9a188b2ff9028c05ba7053f3c247192b4594ab0b7262eb5609c3b291fec16f6",
+    "ops/__init__.py": "8af2a3cf68d2957d08fe16ac373b0ec30bc991e13a21ef45965ffec5581d8f3b",
+    "ops/common.py": "0392e3d0de46833ef637228bd72c0b73fd3d7fff2341c65e184aed631d206eca",
+    "ops/worker.py": "9ca2c732c89c9789ad90c1fa317c1c30b926924a6f7fe5aad302f396cc258bc2",
+    "vendor/mini-gmp.c": "378a9731eb6fd69b93fa074172f79be4089c813365613e414f4da4923dcbda52",
+    "vendor/mini-gmp.h": "54ec9383fdf6103a0e22bde2663ca8eb420338015839b663e0eccee103afae99"
+  },
+  "start_head": "d47690fe9303c28df9572b3442e93481b42d5b53",
+  "started_at": "2026-10-03T17:47:01.269235+00:00",
+  "status": "complete"
+}

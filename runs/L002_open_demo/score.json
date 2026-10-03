@@ -1,0 +1,623 @@
+{
+  "bounds": [
+    200001,
+    210000,
+    1000
+  ],
+  "census_sha256": "28029a76b0985fc978acda2baeee8c66dcdeeb58ffdc56ae668333c2cfd6f7cd",
+  "deviance": {
+    "law": 41.79731276437,
+    "null": 42.936377938491496
+  },
+  "disjoint_scores": {
+    "dyadic_partition": {
+      "deviance": {
+        "law": 14.679791954238155,
+        "null": 14.81884702086143
+      },
+      "gain": 0.13905506662327483,
+      "threshold_met": false
+    },
+    "total_only": {
+      "deviance": {
+        "law": 1.7485746495929106,
+        "null": 1.8858834365166217
+      },
+      "gain": 0.13730878692371107,
+      "threshold_met": false
+    }
+  },
+  "gain": 1.139065174121498,
+  "interpretation": "descriptive composite score: overlapping queries are dependent",
+  "law_id": "L002",
+  "operator_vault_confirmation": false,
+  "residuals": {
+    "at_least_one": {
+      "law": {
+        "deviance": 0.011984829685685039,
+        "predicted": 268.7928374457267,
+        "residual": -1.7928374457267182
+      },
+      "null": {
+        "deviance": 0.021038556805037523,
+        "predicted": 269.37710129532826,
+        "residual": -2.3771012953282593
+      },
+      "observed": 267
+    },
+    "at_least_two": {
+      "law": {
+        "deviance": 5.102307033921587,
+        "predicted": 56.03512291170411,
+        "residual": -16.035122911704107
+      },
+      "null": {
+        "deviance": 5.257333524313108,
+        "predicted": 56.304386156990226,
+        "residual": -16.304386156990226
+      },
+      "observed": 40
+    },
+    "dyadic:0": {
+      "law": {
+        "deviance": 2.4447495566110753,
+        "predicted": 41.67789260259297,
+        "residual": -9.67789260259297
+      },
+      "null": {
+        "deviance": 2.519581846377715,
+        "predicted": 41.83801102527077,
+        "residual": -9.838011025270767
+      },
+      "observed": 32
+    },
+    "dyadic:1": {
+      "law": {
+        "deviance": 0.20567650987525354,
+        "predicted": 26.290845458615053,
+        "residual": -2.2908454586150526
+      },
+      "null": {
+        "deviance": 0.2236318053724684,
+        "predicted": 26.391849814709524,
+        "residual": -2.3918498147095235
+      },
+      "observed": 24
+    },
+    "dyadic:2": {
+      "law": {
+        "deviance": 0.010056758007473299,
+        "predicted": 35.59664150454987,
+        "residual": -0.5966415045498721
+      },
+      "null": {
+        "deviance": 0.015156383699253428,
+        "predicted": 35.73339693373343,
+        "residual": -0.733396933733431
+      },
+      "observed": 35
+    },
+    "dyadic:3": {
+      "law": {
+        "deviance": 0.07506665607311369,
+        "predicted": 41.228308267319925,
+        "residual": 1.7716917326800754
+      },
+      "null": {
+        "deviance": 0.06208669729580096,
+        "predicted": 41.3866994737176,
+        "residual": 1.6133005262824014
+      },
+      "observed": 43
+    },
+    "dyadic:4": {
+      "law": {
+        "deviance": 0.03730888036641744,
+        "predicted": 32.886123900467574,
+        "residual": 1.1138760995324262
+      },
+      "null": {
+        "deviance": 0.02925082700300985,
+        "predicted": 33.01246604394253,
+        "residual": 0.9875339560574687
+      },
+      "observed": 34
+    },
+    "dyadic:5": {
+      "law": {
+        "deviance": 0.05980912168253205,
+        "predicted": 35.53227468377638,
+        "residual": 1.4677253162236212
+      },
+      "null": {
+        "deviance": 0.05133260317522481,
+        "predicted": 35.63890426495126,
+        "residual": 1.3610957350487425
+      },
+      "observed": 37
+    },
+    "dyadic:6": {
+      "law": {
+        "deviance": 2.420258783733331,
+        "predicted": 32.44864853739059,
+        "residual": -8.44864853739059
+      },
+      "null": {
+        "deviance": 2.457242615651971,
+        "predicted": 32.51945116151696,
+        "residual": -8.519451161516962
+      },
+      "observed": 24
+    },
+    "dyadic:7": {
+      "law": {
+        "deviance": 8.270684963649014,
+        "predicted": 31.760528147627117,
+        "residual": -14.760528147627117
+      },
+      "null": {
+        "deviance": 8.315591302144373,
+        "predicted": 31.80879888347198,
+        "residual": -14.80879888347198
+      },
+      "observed": 17
+    },
+    "dyadic:8": {
+      "law": {
+        "deviance": 1.0630541970453056,
+        "predicted": 30.162888429140718,
+        "residual": 5.837111570859282
+      },
+      "null": {
+        "deviance": 1.053258514313372,
+        "predicted": 30.18826349272832,
+        "residual": 5.811736507271679
+      },
+      "observed": 36
+    },
+    "dyadic:9": {
+      "law": {
+        "deviance": 0.09312652719463888,
+        "predicted": 28.359431803435218,
+        "residual": 1.6405681965647823
+      },
+      "null": {
+        "deviance": 0.09171442582824074,
+        "predicted": 28.37168523464605,
+        "residual": 1.6283147653539487
+      },
+      "observed": 30
+    },
+    "residue:12:0": {
+      "law": {
+        "deviance": 2.4760369809368505,
+        "predicted": 56.39662838362517,
+        "residual": -11.39662838362517
+      },
+      "null": {
+        "deviance": 2.5570653884656345,
+        "predicted": 56.59572992479008,
+        "residual": -11.595729924790078
+      },
+      "observed": 45
+    },
+    "residue:12:1": {
+      "law": {
+        "deviance": 1.6415010870146425,
+        "predicted": 56.33901731368948,
+        "residual": -9.339017313689482
+      },
+      "null": {
+        "deviance": 1.6996861642159224,
+        "predicted": 56.513170555198904,
+        "residual": -9.513170555198904
+      },
+      "observed": 47
+    },
+    "residue:12:10": {
+      "law": {
+        "deviance": 0.0,
+        "predicted": 0.0,
+        "residual": 0.0
+      },
+      "null": {
+        "deviance": 0.0,
+        "predicted": 0.0,
+        "residual": 0.0
+      },
+      "observed": 0
+    },
+    "residue:12:11": {
+      "law": {
+        "deviance": 0.012946546995736719,
+        "predicted": 15.445005293713393,
+        "residual": -0.44500529371339326
+      },
+      "null": {
+        "deviance": 0.013823315025599747,
+        "predicted": 15.459976082399848,
+        "residual": -0.459976082399848
+      },
+      "observed": 15
+    },
+    "residue:12:2": {
+      "law": {
+        "deviance": 0.0,
+        "predicted": 0.0,
+        "residual": 0.0
+      },
+      "null": {
+        "deviance": 0.0,
+        "predicted": 0.0,
+        "residual": 0.0
+      },
+      "observed": 0
+    },
+    "residue:12:3": {
+      "law": {
+        "deviance": 0.6866861946954685,
+        "predicted": 54.75475980941183,
+        "residual": 6.24524019058817
+      },
+      "null": {
+        "deviance": 0.6497093696631833,
+        "predicted": 54.91926472527081,
+        "residual": 6.080735274729193
+      },
+      "observed": 61
+    },
+    "residue:12:4": {
+      "law": {
+        "deviance": 0.06664084909256651,
+        "predicted": 46.75399988311418,
+        "residual": -1.753999883114183
+      },
+      "null": {
+        "deviance": 0.07799060830346294,
+        "predicted": 46.89947316486271,
+        "residual": -1.8994731648627123
+      },
+      "observed": 45
+    },
+    "residue:12:5": {
+      "law": {
+        "deviance": 0.35678842609442896,
+        "predicted": 21.723910456310303,
+        "residual": -2.7239104563103034
+      },
+      "null": {
+        "deviance": 0.36740618218565313,
+        "predicted": 21.765966580703868,
+        "residual": -2.765966580703868
+      },
+      "observed": 19
+    },
+    "residue:12:6": {
+      "law": {
+        "deviance": 0.0,
+        "predicted": 0.0,
+        "residual": 0.0
+      },
+      "null": {
+        "deviance": 0.0,
+        "predicted": 0.0,
+        "residual": 0.0
+      },
+      "observed": 0
+    },
+    "residue:12:7": {
+      "law": {
+        "deviance": 0.29730604908376446,
+        "predicted": 19.348330493493556,
+        "residual": -2.348330493493556
+      },
+      "null": {
+        "deviance": 0.30570983236575255,
+        "predicted": 19.38272955487181,
+        "residual": -2.3827295548718084
+      },
+      "observed": 17
+    },
+    "residue:12:8": {
+      "law": {
+        "deviance": 0.04365247476440759,
+        "predicted": 32.79623620462178,
+        "residual": 1.2037637953782223
+      },
+      "null": {
+        "deviance": 0.03726735948752946,
+        "predicted": 32.886737006985754,
+        "residual": 1.1132629930142457
+      },
+      "observed": 34
+    },
+    "residue:12:9": {
+      "law": {
+        "deviance": 0.3669730915922953,
+        "predicted": 32.38569549693464,
+        "residual": -3.3856954969346376
+      },
+      "null": {
+        "deviance": 0.3840438651094811,
+        "predicted": 32.466478733605385,
+        "residual": -3.466478733605385
+      },
+      "observed": 29
+    },
+    "residue:3:0": {
+      "law": {
+        "deviance": 0.5181328782887391,
+        "predicted": 143.53708368997366,
+        "residual": -8.537083689973656
+      },
+      "null": {
+        "deviance": 0.5722857006118254,
+        "predicted": 143.98147338366516,
+        "residual": -8.981473383665161
+      },
+      "observed": 135
+    },
+    "residue:3:1": {
+      "law": {
+        "deviance": 1.5327313369975997,
+        "predicted": 122.44134769029691,
+        "residual": -13.441347690296908
+      },
+      "null": {
+        "deviance": 1.6113691724121253,
+        "predicted": 122.79537327493205,
+        "residual": -13.795373274932047
+      },
+      "observed": 109
+    },
+    "residue:3:2": {
+      "law": {
+        "deviance": 0.05572052666290528,
+        "predicted": 69.96515195464555,
+        "residual": -1.965151954645549
+      },
+      "null": {
+        "deviance": 0.06430983388391898,
+        "predicted": 70.1126796700897,
+        "residual": -2.1126796700897046
+      },
+      "observed": 68
+    },
+    "residue:4:0": {
+      "law": {
+        "deviance": 1.0820586828437584,
+        "predicted": 135.94686447136115,
+        "residual": -11.946864471361152
+      },
+      "null": {
+        "deviance": 1.1597939637472194,
+        "predicted": 136.38194009663766,
+        "residual": -12.381940096637663
+      },
+      "observed": 124
+    },
+    "residue:4:1": {
+      "law": {
+        "deviance": 2.26926758312435,
+        "predicted": 110.44862326693368,
+        "residual": -15.44862326693368
+      },
+      "null": {
+        "deviance": 2.3530349035847493,
+        "predicted": 110.74561586950693,
+        "residual": -15.745615869506935
+      },
+      "observed": 95
+    },
+    "residue:4:2": {
+      "law": {
+        "deviance": 0.0,
+        "predicted": 0.0,
+        "residual": 0.0
+      },
+      "null": {
+        "deviance": 0.0,
+        "predicted": 0.0,
+        "residual": 0.0
+      },
+      "observed": 0
+    },
+    "residue:4:3": {
+      "law": {
+        "deviance": 0.1313866042651135,
+        "predicted": 89.54809559661905,
+        "residual": 3.4519044033809507
+      },
+      "null": {
+        "deviance": 0.11542735585849684,
+        "predicted": 89.76197036254277,
+        "residual": 3.238029637457231
+      },
+      "observed": 93
+    },
+    "residue:5:0": {
+      "law": {
+        "deviance": 0.8580794538002898,
+        "predicted": 60.64463049508537,
+        "residual": 7.355369504914627
+      },
+      "null": {
+        "deviance": 0.8094249567855432,
+        "predicted": 60.84836408542292,
+        "residual": 7.151635914577078
+      },
+      "observed": 68
+    },
+    "residue:5:1": {
+      "law": {
+        "deviance": 1.5520581927429795,
+        "predicted": 84.16777693535275,
+        "residual": -11.167776935352748
+      },
+      "null": {
+        "deviance": 1.6182760964122451,
+        "predicted": 84.41494041169067,
+        "residual": -11.414940411690665
+      },
+      "observed": 73
+    },
+    "residue:5:2": {
+      "law": {
+        "deviance": 0.5669315192120816,
+        "predicted": 52.35263681072012,
+        "residual": -5.352636810720121
+      },
+      "null": {
+        "deviance": 0.59268731765364,
+        "predicted": 52.47729089921315,
+        "residual": -5.477290899213152
+      },
+      "observed": 47
+    },
+    "residue:5:3": {
+      "law": {
+        "deviance": 0.5838295673172293,
+        "predicted": 72.40359158930512,
+        "residual": -6.4035915893051225
+      },
+      "null": {
+        "deviance": 0.6190154504785266,
+        "predicted": 72.599775512101,
+        "residual": -6.599775512101004
+      },
+      "observed": 66
+    },
+    "residue:5:4": {
+      "law": {
+        "deviance": 1.1042003467525365,
+        "predicted": 66.37494750445057,
+        "residual": -8.374947504450574
+      },
+      "null": {
+        "deviance": 1.1485610166777587,
+        "predicted": 66.549155420261,
+        "residual": -8.549155420261002
+      },
+      "observed": 58
+    },
+    "residue:8:0": {
+      "law": {
+        "deviance": 1.335593604720076,
+        "predicted": 57.54094150280883,
+        "residual": -8.540941502808828
+      },
+      "null": {
+        "deviance": 1.3954450866689392,
+        "predicted": 57.740571262781394,
+        "residual": -8.740571262781394
+      },
+      "observed": 49
+    },
+    "residue:8:1": {
+      "law": {
+        "deviance": 1.1923130420104826,
+        "predicted": 74.20527122480065,
+        "residual": -9.205271224800654
+      },
+      "null": {
+        "deviance": 1.2486515399566507,
+        "predicted": 74.42995138699902,
+        "residual": -9.429951386999022
+      },
+      "observed": 65
+    },
+    "residue:8:2": {
+      "law": {
+        "deviance": 0.0,
+        "predicted": 0.0,
+        "residual": 0.0
+      },
+      "null": {
+        "deviance": 0.0,
+        "predicted": 0.0,
+        "residual": 0.0
+      },
+      "observed": 0
+    },
+    "residue:8:3": {
+      "law": {
+        "deviance": 0.23004614453102334,
+        "predicted": 54.42351336885899,
+        "residual": 3.576486631141009
+      },
+      "null": {
+        "deviance": 0.21170501871303227,
+        "predicted": 54.56608531191797,
+        "residual": 3.4339146880820266
+      },
+      "observed": 58
+    },
+    "residue:8:4": {
+      "law": {
+        "deviance": 0.150142081898192,
+        "predicted": 78.40592296855216,
+        "residual": -3.4059229685521615
+      },
+      "null": {
+        "deviance": 0.17127239542171058,
+        "predicted": 78.64136883385768,
+        "residual": -3.6413688338576833
+      },
+      "observed": 75
+    },
+    "residue:8:5": {
+      "law": {
+        "deviance": 1.1431886315254864,
+        "predicted": 36.2433520421335,
+        "residual": -6.243352042133502
+      },
+      "null": {
+        "deviance": 1.168221266769926,
+        "predicted": 36.31566448250917,
+        "residual": -6.31566448250917
+      },
+      "observed": 30
+    },
+    "residue:8:6": {
+      "law": {
+        "deviance": 0.0,
+        "predicted": 0.0,
+        "residual": 0.0
+      },
+      "null": {
+        "deviance": 0.0,
+        "predicted": 0.0,
+        "residual": 0.0
+      },
+      "observed": 0
+    },
+    "residue:8:7": {
+      "law": {
+        "deviance": 0.0004423999686545832,
+        "predicted": 35.12458222775979,
+        "residual": -0.12458222775978811
+      },
+      "null": {
+        "deviance": 0.0010922395367624071,
+        "predicted": 35.19588505062441,
+        "residual": -0.19588505062441186
+      },
+      "observed": 35
+    },
+    "total": {
+      "law": {
+        "deviance": 1.7485746495929106,
+        "predicted": 335.943583334915,
+        "residual": -23.94358333491499
+      },
+      "null": {
+        "deviance": 1.8858834365166217,
+        "predicted": 336.8895263286887,
+        "residual": -24.889526328688703
+      },
+      "observed": 312
+    }
+  },
+  "threshold": 14,
+  "threshold_met": false
+}

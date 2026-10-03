@@ -1,0 +1,33 @@
+{"built": [{"binary": "mf\\checker2.exe", "sha256": "d9c1ba917e4f1957389827e19cc07a36dbdd4869d4a5f6450eb1adc15f7a8e4b"}, {"binary": "mf\\census_kp.exe", "sha256": "cd5f44b26bbce4dfaa3ae751d9ce5a8a41f68bd8c49d68f4580be5ab20720911"}, {"binary": "mf\\census_pk.exe", "sha256": "e71e473017b74c695881ba169c815e965ec9251665ec69c76cdfbac9f4574c31"}]}
+test_division_oracle (test_exact.ExactTests.test_division_oracle) ... ok
+test_exact_statistics (test_exact.ExactTests.test_exact_statistics) ... ok
+test_invalid_inputs_and_duplicate_census (test_exact.ExactTests.test_invalid_inputs_and_duplicate_census) ... ok
+test_medium_regression (test_exact.ExactTests.test_medium_regression) ... ok
+test_montgomery_near_signed64_limit (test_exact.ExactTests.test_montgomery_near_signed64_limit) ... ok
+test_mr_bound_correction (test_exact.ExactTests.test_mr_bound_correction) ... ok
+test_mutations (test_exact.ExactTests.test_mutations) ... ok
+test_pocklington_above_mr_limit_and_corruptions (test_exact.ExactTests.test_pocklington_above_mr_limit_and_corruptions) ... ok
+test_random_10000_claims_reference_and_C (test_exact.ExactTests.test_random_10000_claims_reference_and_C) ... ok
+test_random_engine_ranges_and_cache_contamination (test_exact.ExactTests.test_random_engine_ranges_and_cache_contamination) ... ok
+test_reference_bytes_and_stdout (test_exact.ExactTests.test_reference_bytes_and_stdout) ... ok
+test_reference_census_and_two_independent_engines (test_exact.ExactTests.test_reference_census_and_two_independent_engines) ... ok
+test_small_prime_sieve_exceptions_and_empty_ranges (test_exact.ExactTests.test_small_prime_sieve_exceptions_and_empty_ranges) ... ok
+test_directed_constant_enclosure (test_models.ModelTests.test_directed_constant_enclosure) ... ok
+test_discovery_assignment_budget_and_matching (test_models.ModelTests.test_discovery_assignment_budget_and_matching) ... ok
+test_law_constraints_and_prediction_totals (test_models.ModelTests.test_law_constraints_and_prediction_totals) ... ok
+test_literal_null_and_log_deviance (test_models.ModelTests.test_literal_null_and_log_deviance) ... ok
+test_track0_forests_eight_queries_and_mutations (test_models.ModelTests.test_track0_forests_eight_queries_and_mutations) ... ok
+test_track0_histograms_R60 (test_models.ModelTests.test_track0_histograms_R60) ... ok
+test_track0_sieve_N200_and_projection_contamination (test_models.ModelTests.test_track0_sieve_N200_and_projection_contamination) ... ok
+test_write_once_and_uncommitted_predictions_rejected (test_models.ModelTests.test_write_once_and_uncommitted_predictions_rejected) ... ok
+test_missing_alert_or_uncommitted_prediction_rejected (test_protocol.ProtocolTests.test_missing_alert_or_uncommitted_prediction_rejected) ... ok
+test_queue_constraints_and_exclusive_lock (test_protocol.ProtocolTests.test_queue_constraints_and_exclusive_lock) ... ok
+test_real_git_commit_audit_and_mutations (test_protocol.ProtocolTests.test_real_git_commit_audit_and_mutations) ... ok
+test_supervisor_stops_after_three_restarts (test_protocol.ProtocolTests.test_supervisor_stops_after_three_restarts) ... ok
+test_worker_resume_timeout_and_corrupt_coverage (test_protocol.ProtocolTests.test_worker_resume_timeout_and_corrupt_coverage) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 38.259s
+
+OK
+{"certificates": [{"artifact_sha256": "d26fc0a4f468e19b798434a25b03557c847d0cc0d445d4bcf5d6607a42d57161", "both_checkers": true, "both_exhaustive_engines": true, "census_sha256": "ec51f40e56e125c65a1107f8147af63e6633752d34dec4cb5fc3320eee77a9ce", "factors": 520, "kind": "census", "path": "certificates\\census_10000_20000_1000_ec51f40e56e1.json"}, {"artifact_sha256": "361e16f8a2fa0ffe06f9b2fddb27ac52da1efa5ae072358f171bd0650662cb3b", "both_checkers": true, "both_exhaustive_engines": true, "census_sha256": "d0e00ccf55de45e684dcb44dfde662e959a9d4a93ef43cc09949e329bdfbe943", "factors": 215, "kind": "census", "path": "certificates\\census_1000_3000_20000_d0e00ccf55de.json"}, {"artifact_sha256": "e9760905e371156c85afc13431982d212b0ada48ea884f2bc0abbe61e4f721de", "both_checkers": true, "both_exhaustive_engines": true, "census_sha256": "28029a76b0985fc978acda2baeee8c66dcdeeb58ffdc56ae668333c2cfd6f7cd", "factors": 312, "kind": "census", "path": "certificates\\census_200001_210000_1000_28029a76b098.json"}, {"artifact_sha256": "5dada6ab06e9d33eb80536d6a5d3ca7f44530d1bf6acc85401839b49b2d9a79f", "both_checkers": true, "both_exhaustive_engines": true, "census_sha256": "6de6b2ac9a1b8c3d3b36ae90dc04f4c3973dc62d920183a6f4071c3041a8b2ec", "factors": 5773, "kind": "census", "path": "certificates\\census_3_100000_10000_6de6b2ac9a1b.json"}, {"artifact_sha256": "ee6c9cc02036c34aff3e2d07f577d45bca0736d5abcfff613076724ff194815a", "both_checkers": true, "both_exhaustive_engines": true, "census_sha256": "4c37caf1201fe83d3c9b44d05b9c2770b9e09c9c8ef631c4d957ceb6bf182d6c", "factors": 46, "kind": "census", "path": "certificates\\census_3_200_10000_4c37caf1201f.json"}], "count": 5, "verified": true}

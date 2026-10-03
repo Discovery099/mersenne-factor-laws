@@ -1,0 +1,85 @@
+{
+  "background_jobs_running": 0,
+  "certificates": [
+    {
+      "artifact_sha256": "d26fc0a4f468e19b798434a25b03557c847d0cc0d445d4bcf5d6607a42d57161",
+      "bounds": [
+        10000,
+        20000,
+        1000
+      ],
+      "census_sha256": "ec51f40e56e125c65a1107f8147af63e6633752d34dec4cb5fc3320eee77a9ce",
+      "count": 520,
+      "path": "certificates/census_10000_20000_1000_ec51f40e56e1.json"
+    },
+    {
+      "artifact_sha256": "361e16f8a2fa0ffe06f9b2fddb27ac52da1efa5ae072358f171bd0650662cb3b",
+      "bounds": [
+        1000,
+        3000,
+        20000
+      ],
+      "census_sha256": "d0e00ccf55de45e684dcb44dfde662e959a9d4a93ef43cc09949e329bdfbe943",
+      "count": 215,
+      "path": "certificates/census_1000_3000_20000_d0e00ccf55de.json"
+    },
+    {
+      "artifact_sha256": "e9760905e371156c85afc13431982d212b0ada48ea884f2bc0abbe61e4f721de",
+      "bounds": [
+        200001,
+        210000,
+        1000
+      ],
+      "census_sha256": "28029a76b0985fc978acda2baeee8c66dcdeeb58ffdc56ae668333c2cfd6f7cd",
+      "count": 312,
+      "path": "certificates/census_200001_210000_1000_28029a76b098.json"
+    },
+    {
+      "artifact_sha256": "5dada6ab06e9d33eb80536d6a5d3ca7f44530d1bf6acc85401839b49b2d9a79f",
+      "bounds": [
+        3,
+        100000,
+        10000
+      ],
+      "census_sha256": "6de6b2ac9a1b8c3d3b36ae90dc04f4c3973dc62d920183a6f4071c3041a8b2ec",
+      "count": 5773,
+      "path": "certificates/census_3_100000_10000_6de6b2ac9a1b.json"
+    },
+    {
+      "artifact_sha256": "ee6c9cc02036c34aff3e2d07f577d45bca0736d5abcfff613076724ff194815a",
+      "bounds": [
+        3,
+        200,
+        10000
+      ],
+      "census_sha256": "4c37caf1201fe83d3c9b44d05b9c2770b9e09c9c8ef631c4d957ceb6bf182d6c",
+      "count": 46,
+      "path": "certificates/census_3_200_10000_4c37caf1201f.json"
+    }
+  ],
+  "checker_hashes": {
+    "mf/checker.py": "d4223e09837915eb0845a682c5b805975255b0a9fc4e00cb52dd564454c5e8d6",
+    "mf/checker2.c": "114823495e89187dda549197601140887aa1a757fb5e17d49872d07ad7212e14",
+    "mf/score.py": "39f81fa87da62ce933bc46e1e3da2491e70ad0e7b7dc48e5e232437c32c26ad7"
+  },
+  "claim_levels": [
+    "C0 reproduction",
+    "C2 finite censuses"
+  ],
+  "cpu_accounting": "completed C processes only; excludes compilation/tests, killed partial chunks and prediction Python time",
+  "cpu_hours_recorded_experiments": 0.0045225694444444445,
+  "factor_claim_comparisons": 10000,
+  "gimps_credit": false,
+  "law_demo_threshold_met": false,
+  "novelty": "overlap-found",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "prediction_commit": "d47690fe9303c28df9572b3442e93481b42d5b53",
+  "python": "3.12.14",
+  "sealed_archive_results_imported": false,
+  "status": "verified local software build; campaign pending operator inputs",
+  "test_groups": 26,
+  "tokens": null,
+  "updated_at": "2026-10-03T17:50:39.882328+00:00",
+  "vault_confirmation": false,
+  "version": "0.3.0"
+}

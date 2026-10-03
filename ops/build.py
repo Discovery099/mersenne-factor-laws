@@ -10,6 +10,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def build():
+    for directory in ("runs", "certificates", "predictions"):
+        (ROOT / directory).mkdir(exist_ok=True)
     cc = os.environ.get("CC") or shutil.which("gcc") or shutil.which("clang")
     if not cc:
         raise RuntimeError("Install a C11 compiler supporting unsigned __int128 (GCC or Clang)")

@@ -1,33 +1,38 @@
-# State — build v0.3, campaign day 0
+# State — v0.3 handoff, campaign day 0
 
-Original task: build the supplied P12 project. User subsequently supplied
-v0.1 and v0.2 ZIPs and confirmed having GIMPS assignments; details pending.
+Verified local build complete. 26 tests; 5 dual-checker/dual-engine
+certificates with counts 46, 215, 520, 5773, 312 (bounds in RESULTS.md).
+Novelty: overlap-found. No new-factor or theorem claim.
 
-Reference hash/output reproduced. Two C engines and independent Python/C
-arbitrary-integer factor checkers built natively on Windows. Completed fixed
-censuses: 46, 215, 520, 5773 factors; hashes stored in certificates and ledger.
-N0 sanity expectation: 507.62974052227594. Directed constant enclosure confirms
-C2=0.660162 and 2C2=1.320324 to six decimal places.
+L002-OPEN prediction commit d47690fe9303c28df9572b3442e93481b42d5b53 preceded
+computation. Observed 312; N0 336.8895; L002 335.9436. Gain 1.1391<14: failed.
+Residuals retained in runs/L002_open_demo/score.json and DEAD_ENDS.md.
+Do not retest edited models on this band.
 
-Novelty: overlap-found. Supplied v0.2 L001 is a known heuristic. Source-only
-archive import preserves provenance; vault outputs are not used in this build.
-R1 exact seed reproduction remains unresolved; generic bounded oracles tested.
+Supervisor completed on first attempt and stopped; zero active workers.
+Queue retains completed demo for audit. Logs/status in ops/runtime;
+checkpoint runs/L002_open_demo. No perpetual process or automation installed.
 
-Active hypothesis: L002 finite-prime tail correction; prospective open band
-200001–210000, K=1000. Next: freeze predictions before computing this band.
-No background campaign currently running. No discovery assignment imported.
-No external result submitted. Long-run resource cap remains pending.
+Acceptance source fingerprints: CHECKERS.sha256. Targets: TARGETS.sha256.
+Hardware: 4 logical CPUs, 12.67 GB RAM, Windows 10, GCC 16.1.0, Python 3.12.14.
+Experiment CPU hours recorded: 0.004523; see META.json for accounting limits.
 
-Hardware: Windows, 4 logical CPUs, 12.67 GB RAM; GCC 16.1.0 MinGW-w64.
-Checker SHA-256 values are frozen in CHECKERS.sha256 before the demonstration.
+User supplied v0.1/v0.2 ZIPs. Source-only snapshots and archive hashes are in
+archive/. Previously computed vault values were not imported or rescored.
+L001 is the supplied formula adapter; L002 is a separate failed experiment.
+Faithful seed reproduction remains blocked by missing original definitions.
+
+Operator confirms GIMPS assignments but account/export/client paths and CPU
+cap remain pending. Discovery planning/result adapters are ready for these.
+No account creation, assignment request or external submission occurred.
 
 Next three actions:
-1. Finish protocol fault tests and commit the source snapshot.
-2. Preregister L002 open demonstration; run it through a one-slot bounded queue.
-3. Score, reverify certificates, refresh handoff and deliver a portable ZIP.
+1. Import sanitized owned assignments and current known-factor/bounds exports.
+2. Commit L001 versus N0 predictions for fresh C(220001,225000,1000), then run.
+3. Validate scalable prediction numerics before larger grids or rolling vaults.
 
-Reflection: Independent enumeration agrees with every disclosed benchmark.
-The brief's MR claim needed correction, and prior literature refutes its
-suggested novelty premise. The supplied archives add useful history, but their
-completed vault outputs cannot be relabelled as new blind results. The useful
-next evidence is an auditable prediction-before-computation run on fresh data.
+Reflection: Independent enumeration reproduces all required finite regression
+cases. The reference's MR bound needed correction, and literature establishes
+prior overlap. The first prospective experiment supplies negative evidence for
+L002, which is retained rather than revised on the same data. The remaining
+work is research and operator-dependent discovery, not hidden completed work.
