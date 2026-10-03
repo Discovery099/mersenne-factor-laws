@@ -1,0 +1,10 @@
+M11 factors 23, 89: (True, 'prime factor, k=1 (prime by the k <= 2p+1 lemma)') (True, 'prime factor, k=4 (prime by the k <= 2p+1 lemma)')
+M29 factors: [True, True, True]
+2047 = 23*89 rejected as composite: (False, 'composite divisor, k=93')
+mutations rejected: True True True
+Pocklington on q=89 (p=11): (True, 'Pocklington certificate valid')
+bad Pocklington witness rejected: True
+census p<=200, k<=10000: 46 factors; k-mod-4 law holds: True
+census sha256[:16]: 4c37caf1201fe83d
+smallest-k factor of M43, M47, M53: [5, 25, 60]
+commit('law: test') = 281f1f73203c990b

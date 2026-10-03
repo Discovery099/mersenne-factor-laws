@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+mf/*.exe
+mf/checker2
+mf/census_kp
+mf/census_pk
+build/
+runs/
+ops/runtime/
+HEARTBEAT
+data/private/
+discovery/private/

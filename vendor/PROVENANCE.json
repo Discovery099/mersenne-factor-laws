@@ -1,0 +1,11 @@
+{
+  "source": "https://ftp.gnu.org/gnu/gmp/gmp-6.3.0.tar.xz",
+  "accessed": "2026-10-03",
+  "archive_sha256": "a3c2b80201b89e68616f4ad30bc66aee4927c3ce50e33929ca819d5c43538898",
+  "files": {
+    "COPYING.LESSERv3": "a853c2ffec17057872340eee242ae4d96cbf2b520ae27d903e1b2fef1a5f9d1c",
+    "COPYINGv3": "e6037104443f9a7829b2aa7c5370d0789a7bda3ca65a0b904cdc0c2e285d9195",
+    "mini-gmp.c": "378a9731eb6fd69b93fa074172f79be4089c813365613e414f4da4923dcbda52",
+    "mini-gmp.h": "54ec9383fdf6103a0e22bde2663ca8eb420338015839b663e0eccee103afae99"
+  }
+}

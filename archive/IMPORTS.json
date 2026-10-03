@@ -1,0 +1,100 @@
+[
+  {
+    "version": "0.1",
+    "archive": "C:\\Users\\Makaki\\Downloads\\mersenne-factor-laws-v0.1.zip",
+    "archive_sha256": "68918c3c0eab3e8a836ac8ad4c6c887205ed8701f23e038956636e22b4067991",
+    "compressed_bytes": 302174,
+    "preserved_source": [
+      {
+        "path": "mf/checker.py",
+        "sha256": "bcfecb680595f18b9dbaef1ff37e94b171b81481528b6adefaffafe39c07d9d8"
+      },
+      {
+        "path": "mf/checker2.c",
+        "sha256": "9397f8ed8a76a646153e519d0205f6055f8f5ecce765e1ee56f994d4dacabf5c"
+      },
+      {
+        "path": "mf/census_kp.c",
+        "sha256": "09172045f9a12b9fa41700c16dbf859b094d984c6ea353baafb619976a0c4054"
+      },
+      {
+        "path": "mf/census_pk.c",
+        "sha256": "2543d971d8b268d9cb8e930747bc650aed89c35c3863d65ac2fdc5d75e066ab3"
+      },
+      {
+        "path": "mf/score.py",
+        "sha256": "75fc991162598d2a906545f75cce3fc39bc5e75137743680a19c15a24af33a6d"
+      },
+      {
+        "path": "ops/supervisor.py",
+        "sha256": "03b107d8b13b068d8451914eda47d935153ae0caf72b2c6f88afbe7e32841e57"
+      },
+      {
+        "path": "mf/campaign.py",
+        "sha256": "a325134aba2c68fec2a8f8b016f74ca80d2f6a2b319c71439fe0f8d3fe624ecf"
+      }
+    ],
+    "sealed_results_imported": false
+  },
+  {
+    "version": "0.2",
+    "archive": "C:\\Users\\Makaki\\Downloads\\mersenne-factor-laws-v0.2.zip",
+    "archive_sha256": "e64b9d511fbe9fd9c2fc94bddc3d51f31dde82b9aa8ea3fe76aee081c25ccc35",
+    "compressed_bytes": 7007281,
+    "preserved_source": [
+      {
+        "path": "mf/checker.py",
+        "sha256": "bcfecb680595f18b9dbaef1ff37e94b171b81481528b6adefaffafe39c07d9d8"
+      },
+      {
+        "path": "mf/checker2.c",
+        "sha256": "9397f8ed8a76a646153e519d0205f6055f8f5ecce765e1ee56f994d4dacabf5c"
+      },
+      {
+        "path": "mf/census_kp.c",
+        "sha256": "09172045f9a12b9fa41700c16dbf859b094d984c6ea353baafb619976a0c4054"
+      },
+      {
+        "path": "mf/census_pk.c",
+        "sha256": "2543d971d8b268d9cb8e930747bc650aed89c35c3863d65ac2fdc5d75e066ab3"
+      },
+      {
+        "path": "mf/score.py",
+        "sha256": "75fc991162598d2a906545f75cce3fc39bc5e75137743680a19c15a24af33a6d"
+      },
+      {
+        "path": "ops/supervisor.py",
+        "sha256": "03b107d8b13b068d8451914eda47d935153ae0caf72b2c6f88afbe7e32841e57"
+      },
+      {
+        "path": "mf/campaign.py",
+        "sha256": "a325134aba2c68fec2a8f8b016f74ca80d2f6a2b319c71439fe0f8d3fe624ecf"
+      },
+      {
+        "path": "laws/L001.py",
+        "sha256": "e2667ae17879eea205d26518837b952301a2d6569fdc108f094ffc5fb33845bf"
+      },
+      {
+        "path": "laws/L001.md",
+        "sha256": "683ed0a5d232a216bc4c3be40fe47b103afdf584658664cf37fea4864a4a12b4"
+      },
+      {
+        "path": "laws/constants.json",
+        "sha256": "70fda7aaf219d560d3f75cc3db735b6c24f09cd8c10bea4b7cce66e9b7d376f6"
+      },
+      {
+        "path": "mf/score_v2.py",
+        "sha256": "06afcbab8836eb05367f9925d784f1460e49f08a1f7edde2a7d2572b6bab7358"
+      },
+      {
+        "path": "mf/verify_sealed.py",
+        "sha256": "9e4d7b18399f5f95c86af7d826b9b0f4196254031fdde9715983c27a93ff4503"
+      },
+      {
+        "path": "ops/sealed_campaign.py",
+        "sha256": "41bb639c9b7d6a196242c98286d4bc696477b148cdf4c9f9da51915d04fe0e7b"
+      }
+    ],
+    "sealed_results_imported": false
+  }
+]

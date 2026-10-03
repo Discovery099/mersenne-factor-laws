@@ -1,0 +1,16 @@
+[
+  {
+    "url": "https://www.mersenne.org/robots.txt",
+    "accessed_at": "2026-10-03T17:34:21.282244+00:00",
+    "sha256": "23921ff78480f9af3c9547bf22cee1f2deba893967257752fc0287df606e9cc5",
+    "size": 1296,
+    "content": "User-Agent: *\r\nAllow: /report_milestones/\r\nAllow: /report_benchmarks/\r\nDisallow: /cgi-bin\r\nDisallow: /account\r\nDisallow: /assignments\r\nDisallow: /update\r\nDisallow: /cpus\r\nDisallow: /editcpu\r\nDisallow: /forgot\r\nDisallow: /workload\r\nDisallow: /results\r\nDisallow: /result_archive\r\nDisallow: /v4_migration\r\nDisallow: /team\r\nDisallow: /tmembers\r\nDisallow: /tcpus\r\nDisallow: /tworkload\r\nDisallow: /tresults\r\nDisallow: /tcreate\r\nDisallow: /tupdate\r\nDisallow: /jteam\r\nDisallow: /v4_migration\r\nDisallow: /report_*\r\nDisallow: /manual_*\r\nDisallow: /proof_*\r\nDisallow: /sp_report_primenet_gimps_*\r\nDisallow: /cgi-bin\r\nDisallow: /webarchive\r\nDisallow: /reset.php\r\nDisallow: /login.mock.php\r\nDisallow: /login.legacy.php\r\nDisallow: /default.mock.php\r\nDisallow: /default.legacy.php\r\nDisallow: /*/moo.php\r\nDisallow: /*/default.mock.php\r\nDisallow: /*/default.legacy.php\r\nDisallow: /various/math.mock.php\r\nDisallow: /various/history.mock.php\r\nDisallow: /various/works.mock.php\r\nDisallow: /various/math.legacy.php\r\nDisal"
+  },
+  {
+    "url": "https://www.mersenne.ca/robots.txt",
+    "accessed_at": "2026-10-03T17:34:24.405471+00:00",
+    "sha256": "9c786381302acd012e3374617d814017e2fc7bb639579e7660afa1fc5f17b43a",
+    "size": 1433,
+    "content": "User-agent: 360Spider\r\nDisallow: /\r\n\r\nUser-agent: Baiduspider\r\nDisallow: /\r\n\r\nUser-agent: barkrowler\r\nDisallow: /\r\n\r\nUser-agent: Bytespider\r\nDisallow: /\r\n\r\nUser-agent: Crawlson\r\nDisallow: /\r\n\r\nUser-agent: DAUM\r\nDisallow: /\r\n\r\nUser-agent: facebookexternalhit\r\nDisallow: /\r\n\r\nUser-agent: ImagesiftBot\r\nDisallow: /\r\n\r\nUser-agent: ltx71\r\nDisallow: /\r\n\r\nUser-agent: Mail.RU_Bot\r\nDisallow: /\r\n\r\nUser-agent: meta-externalads\r\nDisallow: /\r\n\r\nUser-agent: meta-externalagent\r\nDisallow: /\r\n\r\nUser-agent: meta-externalfetcher\r\nDisallow: /\r\n\r\nUser-agent: meta-webindexer\r\nDisallow: /\r\n\r\nUser-agent: PetalBot\r\nDisallow: /\r\n\r\nUser-agent: SemrushBot\r\nDisallow: /\r\n\r\nUser-agent: SenutoBot\r\nDisallow: /\r\n\r\nUser-agent: Sogou\r\nDisallow: /\r\n\r\nUser-agent: Sogou inst spider\r\nDisallow: /\r\n\r\nUser-agent: Sogou Push Spider\r\nDisallow: /\r\n\r\nUser-agent: Sogou web spider\r\nDisallow: /\r\n\r\nUser-agent: Yandex\r\nDisallow: /\r\n\r\nUser-agent: Yisouspider\r\nDisallow: /\r\n\r\n\r\nUser-agent: anthropic-ai\r\nUser-agent: ClaudeBot\r\nUser-agent: Cla"
+  }
+]
