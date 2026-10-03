@@ -1,6 +1,20 @@
 {
   "background_jobs_running": 0,
-  "certificates": [
+  "checker_hashes": {
+    "mf/checker.py": "d4223e09837915eb0845a682c5b805975255b0a9fc4e00cb52dd564454c5e8d6",
+    "mf/checker2.c": "114823495e89187dda549197601140887aa1a757fb5e17d49872d07ad7212e14",
+    "mf/score.py": "39f81fa87da62ce933bc46e1e3da2491e70ad0e7b7dc48e5e232437c32c26ad7"
+  },
+  "claim_levels": [
+    "C0 reproduction",
+    "C2 finite censuses"
+  ],
+  "cpu_accounting": "completed recorded C engine processes only; excludes checkers, compilation/tests, partial killed work, prediction and audit",
+  "cpu_hours_recorded_experiments": 1.0282638888888889,
+  "factor_claim_comparisons": 10000,
+  "gimps_credit": false,
+  "law_demo_threshold_met": false,
+  "legacy_v03_certificates": [
     {
       "artifact_sha256": "d26fc0a4f468e19b798434a25b03557c847d0cc0d445d4bcf5d6607a42d57161",
       "bounds": [
@@ -57,29 +71,73 @@
       "path": "certificates/census_3_200_10000_4c37caf1201f.json"
     }
   ],
-  "checker_hashes": {
-    "mf/checker.py": "d4223e09837915eb0845a682c5b805975255b0a9fc4e00cb52dd564454c5e8d6",
-    "mf/checker2.c": "114823495e89187dda549197601140887aa1a757fb5e17d49872d07ad7212e14",
-    "mf/score.py": "39f81fa87da62ce933bc46e1e3da2491e70ad0e7b7dc48e5e232437c32c26ad7"
-  },
-  "claim_levels": [
-    "C0 reproduction",
-    "C2 finite censuses"
-  ],
-  "cpu_accounting": "completed C processes only; excludes compilation/tests, killed partial chunks and prediction Python time",
-  "cpu_hours_recorded_experiments": 0.0045225694444444445,
-  "factor_claim_comparisons": 10000,
-  "gimps_credit": false,
-  "law_demo_threshold_met": false,
+  "legacy_v03_test_groups": 26,
   "novelty": "overlap-found",
   "platform": "Windows-10-10.0.19045-SP0",
-  "prediction_commit": "d47690fe9303c28df9572b3442e93481b42d5b53",
+  "prediction_commit": "0a3a73847f3f533dae5fcface0c0abd5099801cb",
+  "prediction_sha256": "a4fb571f0c65367afec4b02d58dd5b5c6bc269bb252bb2ff4c3c17f40483d641",
   "python": "3.12.14",
   "sealed_archive_results_imported": false,
-  "status": "verified local software build; campaign pending operator inputs",
-  "test_groups": 26,
+  "status": "full committed Vault-S design completed and locally audited",
+  "test_history": {
+    "corrected_fixture_targeted_passed": 1,
+    "full_run_passed": 35,
+    "report_tests_passed": 1,
+    "research_build_cases_checked": 36,
+    "runner_tests_passed": 4
+  },
   "tokens": null,
-  "updated_at": "2026-10-03T17:50:39.882328+00:00",
+  "updated_at": "2026-10-03T20:35:43.003984+00:00",
   "vault_confirmation": false,
-  "version": "0.3.0"
+  "vault_full_design": {
+    "audit": "results/Vault_S2_full/audit.json",
+    "engine_cpu_hours": 1.0237413194444445,
+    "operator_seal_confirmation": "pending",
+    "outputs": [
+      {
+        "bounds": [
+          10000001,
+          20000000,
+          10000
+        ],
+        "certificate": "certificates/census_10000001_20000000_10000_4cd1542dbe12.json",
+        "count": 250614,
+        "label": "sealed_region_2",
+        "score": "runs\\Vault_S2_full\\sealed_region_2\\score.json",
+        "sha256": "4cd1542dbe1264ef0510b43bc165cc1a761ef24b3e42ba65118406e65bde5415"
+      },
+      {
+        "bounds": [
+          20000001,
+          30000000,
+          10000
+        ],
+        "certificate": "certificates/census_20000001_30000000_10000_57e1388a33a8.json",
+        "count": 236411,
+        "label": "extension",
+        "score": "runs\\Vault_S2_full\\extension\\score.json",
+        "sha256": "57e1388a33a8e248154ffedbc83ce229cb5fba90c35729fcad6d7783716f7c94"
+      },
+      {
+        "bounds": [
+          10000001,
+          30000000,
+          10000
+        ],
+        "certificate": "certificates/census_10000001_30000000_10000_478aef5d3b6d.json",
+        "count": 487025,
+        "label": "enlarged_design",
+        "score": "runs\\Vault_S2_full\\enlarged_design\\score.json",
+        "sha256": "478aef5d3b6d09952fddef0189dc985ecec117f7ddff41c3769307ff8e9c577b"
+      }
+    ],
+    "primary_deviances": {
+      "L001": 97.66731698607703,
+      "L002": 538.6330809730631,
+      "L003": 27.878740056256227,
+      "N0": 582.2144041315653
+    },
+    "region1_rerun": false
+  },
+  "version": "0.4.0"
 }

@@ -8,9 +8,10 @@ preserved under `archive/supplied-source/`. Original ZIPs remain untouched.
 The v0.4 research additions implement zero-fit L003 multiplicity predictions,
 prospective power checks, a scalable prediction-only engine, and a multi-law
 registration for the fixed Vault-S region 2 plus a separately named extension.
-See `REGISTRATION.md` and `POWER_PROTOCOL.md`. Neither band has been censused
-by this request, and region 1 has not been rerun. The original exact-tool and
-v0.3 experiment source fingerprints remain unchanged.
+See `REGISTRATION.md` and `POWER_PROTOCOL.md`. The user authorized the full
+committed census after receiving the prediction SHA-256. Execution state is
+recorded in `runs/Vault_S2_full/progress.json`; region 1 has not been rerun.
+The original exact-tool and v0.3 experiment source fingerprints remain unchanged.
 
 ## Build and verify
 
@@ -22,6 +23,12 @@ On this Windows machine, open PowerShell in this directory and run:
 
 This builds the three native executables, runs the tests, and rechecks every
 certificate using both independent factor checkers and exhaustive engines.
+It deliberately repeats the exhaustive censuses, including large certificates.
+To audit the completed Vault-S run's recorded evidence and recompute its frozen
+scores without repeating enumeration, use `.\run.ps1 audit` on Windows or
+`python -m ops.vault_report` directly (`make audit` on Unix).
+That audit requires the full run to have completed and verifies both engines'
+saved census bytes, coverage, prediction provenance, certificates and summaries.
 Python 3.10+ and GCC/Clang with unsigned 128-bit arithmetic are required.
 GNU mini-gmp 6.3.0 is vendored with licenses and pinned file hashes; there are
 no Python package dependencies for the exact tools. The accelerated research
@@ -94,6 +101,8 @@ execution dependency invalidates the old active protocol until a versioned
 reverification/migration is performed. Local git dates are an audit trail,
 not a trusted external timestamp. No perpetual job or scheduled automation is
 installed by this build. A persistent host is required for unattended work.
+Git attributes disable line-ending conversion so a checkout preserves the
+exact bytes covered by the registered SHA-256 values.
 
 ## Supplied versions and discovery
 

@@ -91,18 +91,24 @@ def report(work=ROOT/'runs/Vault_S2_full'):
         for cell in ('total','at_least_one','at_least_two','maximum'):
             lines.append('| '+cell+' | '+str(rec['observed'][cell])+' | '+' | '.join(f'{rec["predictions"][m][cell]:.6f}' for m in ('N0','L001','L002','L003'))+' |')
         ds=rec['scores']['descriptive_composite']['deviances']
-        lines += ['','| Law | Full-summary deviance | Gain over N0 | Power eligible in this scope | >=14 gain |',
+        lines += ['','| Law | Full-summary deviance | Gain over N0 | Power eligible in this scope | Eligible win (gain >=14) |',
                   '| --- | ---: | ---: | --- | --- |']
         for law in ('L001','L002','L003'):
             row=rec['scores']['descriptive_composite']['comparisons']['N0_vs_'+law]
             lines.append(f'| {law} | {ds[law]:.6f} | {ds["N0"]-ds[law]:.6f} | {row["power_eligible"]} | {row["second_law_wins"]} |')
         lines += ['',f'L003 gain over L001: **{ds["L001"]-ds["L003"]:.6f}** (threshold 14).',
                   'Their factor-count expectations are identical; this contrast comes entirely from multiplicity.','']
+    primary=records['enlarged_design']
+    residual_one=primary['observed']['at_least_one']-primary['predictions']['L003']['at_least_one']
+    residual_two=primary['observed']['at_least_two']-primary['predictions']['L003']['at_least_two']
     lines += ['## Interpretation and limits','',
               'Scores use the frozen complete summary, including maximum once. These overlapping',
               'cells form a composite diagnostic, not an independent likelihood ratio or a p-value.',
               'A lower L003 score supports its finite Bernoulli correction relative to L001 on',
               'these cells; it does not prove independence of actual Mersenne factors or establish novelty.',
+              f'On the enlarged design, observed minus L003 predicted is {residual_one:+.6f} for >=1',
+              f'and {residual_two:+.6f} for >=2. A relative win does not establish calibrated goodness',
+              'of fit or justify treating every remaining residual as ordinary noise.',
               'The original region 2 N0/L002 comparison remains underpowered, regardless of its realized gain.',
               'No law may be refitted and retested on these now-observed bands.','',
               f'Native engine CPU time recorded: {manifest["engine_cpu_s"] / 3600:.6f} CPU-hours.',

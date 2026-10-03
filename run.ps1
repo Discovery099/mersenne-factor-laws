@@ -1,11 +1,11 @@
-param([ValidateSet("all", "build", "test", "verify", "status", "demo")][string]$Action = "all")
+param([ValidateSet("all", "build", "test", "verify", "status", "demo", "audit")][string]$Action = "all")
 $ErrorActionPreference = "Stop"
 Set-Location $PSScriptRoot
 $taskPython = Join-Path $env:USERPROFILE ".cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe"
 if (-not (Test-Path -LiteralPath $taskPython)) {
     $taskPython = (Get-Command python -ErrorAction Stop).Source
 }
-if ($Action -ne "status") {
+if ($Action -notin @("status", "audit")) {
     & $taskPython -m ops.build
     if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 }
@@ -15,5 +15,6 @@ if ($Action -in @("all", "test")) {
 }
 if ($Action -in @("all", "verify")) { & $taskPython -m ops.verify }
 if ($Action -eq "status") { & $taskPython -m ops.supervisor status }
+if ($Action -eq "audit") { & $taskPython -m ops.vault_report }
 if ($Action -eq "demo") { & $taskPython -m ops.validate --full }
 exit $LASTEXITCODE

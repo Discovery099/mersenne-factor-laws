@@ -1,5 +1,5 @@
 PYTHON ?= python
-.PHONY: all build test test-full verify status demo
+.PHONY: all build test test-full verify status demo audit
 all: build
 build:
 	$(PYTHON) -m ops.build
@@ -11,5 +11,7 @@ verify: build
 	$(PYTHON) -m ops.verify
 status:
 	$(PYTHON) -m ops.supervisor status
+audit:
+	$(PYTHON) -m ops.vault_report
 demo: build
 	$(PYTHON) -m ops.validate

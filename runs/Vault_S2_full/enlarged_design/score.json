@@ -1,0 +1,152 @@
+{
+  "bounds": [
+    10000001,
+    30000000,
+    10000
+  ],
+  "census_sha256": "478aef5d3b6d09952fddef0189dc985ecec117f7ddff41c3769307ff8e9c577b",
+  "input_origin": "local dual-engine verified census; operator sealed confirmation pending",
+  "interpretation": "composite diagnostic, dependent summary cells; hash confirmation is external",
+  "operator_hash_confirmation": false,
+  "prediction_sha256": "a4fb571f0c65367afec4b02d58dd5b5c6bc269bb252bb2ff4c3c17f40483d641",
+  "scores": {
+    "descriptive_composite": {
+      "comparisons": {
+        "L001_vs_L002": {
+          "first_law_wins": true,
+          "gain_for_first_law": 440.9657639869861,
+          "power_eligible": true,
+          "second_law_wins": false
+        },
+        "L001_vs_L003": {
+          "first_law_wins": false,
+          "gain_for_first_law": -69.7885769298208,
+          "power_eligible": true,
+          "second_law_wins": true
+        },
+        "L002_vs_L003": {
+          "first_law_wins": false,
+          "gain_for_first_law": -510.7543409168069,
+          "power_eligible": true,
+          "second_law_wins": true
+        },
+        "N0_vs_L001": {
+          "first_law_wins": false,
+          "gain_for_first_law": -484.54708714548826,
+          "power_eligible": true,
+          "second_law_wins": true
+        },
+        "N0_vs_L002": {
+          "first_law_wins": false,
+          "gain_for_first_law": -43.58132315850219,
+          "power_eligible": true,
+          "second_law_wins": true
+        },
+        "N0_vs_L003": {
+          "first_law_wins": false,
+          "gain_for_first_law": -554.3356640753091,
+          "power_eligible": true,
+          "second_law_wins": true
+        }
+      },
+      "deviances": {
+        "L001": 97.66731698607703,
+        "L002": 538.6330809730631,
+        "L003": 27.878740056256227,
+        "N0": 582.2144041315653
+      }
+    },
+    "dyadic": {
+      "comparisons": {
+        "L001_vs_L002": {
+          "first_law_wins": false,
+          "gain_for_first_law": -0.225177697963594,
+          "power_eligible": false,
+          "second_law_wins": false
+        },
+        "L001_vs_L003": {
+          "first_law_wins": false,
+          "gain_for_first_law": 0.0,
+          "power_eligible": false,
+          "second_law_wins": false
+        },
+        "L002_vs_L003": {
+          "first_law_wins": false,
+          "gain_for_first_law": 0.225177697963594,
+          "power_eligible": false,
+          "second_law_wins": false
+        },
+        "N0_vs_L001": {
+          "first_law_wins": false,
+          "gain_for_first_law": -5.3377849219446105,
+          "power_eligible": false,
+          "second_law_wins": false
+        },
+        "N0_vs_L002": {
+          "first_law_wins": false,
+          "gain_for_first_law": -5.5629626199082045,
+          "power_eligible": false,
+          "second_law_wins": false
+        },
+        "N0_vs_L003": {
+          "first_law_wins": false,
+          "gain_for_first_law": -5.3377849219446105,
+          "power_eligible": false,
+          "second_law_wins": false
+        }
+      },
+      "deviances": {
+        "L001": 2.739481427582092,
+        "L002": 2.514303729618498,
+        "L003": 2.739481427582092,
+        "N0": 8.077266349526703
+      }
+    },
+    "multiplicity": {
+      "comparisons": {
+        "L001_vs_L002": {
+          "first_law_wins": true,
+          "gain_for_first_law": 440.60487545776965,
+          "power_eligible": true,
+          "second_law_wins": false
+        },
+        "L001_vs_L003": {
+          "first_law_wins": false,
+          "gain_for_first_law": -69.78857692982079,
+          "power_eligible": true,
+          "second_law_wins": true
+        },
+        "L002_vs_L003": {
+          "first_law_wins": false,
+          "gain_for_first_law": -510.39345238759046,
+          "power_eligible": true,
+          "second_law_wins": true
+        },
+        "N0_vs_L001": {
+          "first_law_wins": false,
+          "gain_for_first_law": -452.1232013633842,
+          "power_eligible": true,
+          "second_law_wins": true
+        },
+        "N0_vs_L002": {
+          "first_law_wins": false,
+          "gain_for_first_law": -11.518325905614574,
+          "power_eligible": false,
+          "second_law_wins": false
+        },
+        "N0_vs_L003": {
+          "first_law_wins": false,
+          "gain_for_first_law": -521.911778293205,
+          "power_eligible": true,
+          "second_law_wins": true
+        }
+      },
+      "deviances": {
+        "L001": 79.05501003695595,
+        "L002": 519.6598854947256,
+        "L003": 9.266433107135152,
+        "N0": 531.1782114003402
+      }
+    }
+  }
+}

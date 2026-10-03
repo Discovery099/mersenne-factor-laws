@@ -1,0 +1,53 @@
+{
+  "C_checker_accepted": 12503,
+  "bounds": [
+    14000001,
+    14500000,
+    10000
+  ],
+  "count": 12503,
+  "engines": [
+    {
+      "attempt": 1,
+      "binary_sha256": "cd5f44b26bbce4dfaa3ae751d9ce5a8a41f68bd8c49d68f4580be5ab20720911",
+      "bounds": [
+        14000001,
+        14500000,
+        10000
+      ],
+      "completed_at": "2026-10-03T19:23:28.015462+00:00",
+      "count": 12503,
+      "cpu_s": 19.140625,
+      "engine": "census_kp",
+      "sha256": "bc8cd33205465cbc57137a00db4756a5bcb766e2eb03bf87ce31ed9f54096008",
+      "started_at": "2026-10-03T19:22:50.898644+00:00",
+      "wall_s": 36.82799999999952
+    },
+    {
+      "attempt": 1,
+      "binary_sha256": "e71e473017b74c695881ba169c815e965ec9251665ec69c76cdfbac9f4574c31",
+      "bounds": [
+        14000001,
+        14500000,
+        10000
+      ],
+      "completed_at": "2026-10-03T19:25:42.310149+00:00",
+      "count": 12503,
+      "cpu_s": 88.015625,
+      "engine": "census_pk",
+      "sha256": "bc8cd33205465cbc57137a00db4756a5bcb766e2eb03bf87ce31ed9f54096008",
+      "started_at": "2026-10-03T19:22:50.898644+00:00",
+      "wall_s": 171.125
+    }
+  ],
+  "path": "part_14000001_14500000_10000_census_kp.txt",
+  "python_checker": {
+    "claim": "membership-only; completeness needs independent enumeration",
+    "count": 12503,
+    "sha256": "bc8cd33205465cbc57137a00db4756a5bcb766e2eb03bf87ce31ed9f54096008",
+    "valid": true
+  },
+  "second_path": "part_14000001_14500000_10000_census_pk.txt",
+  "sha256": "bc8cd33205465cbc57137a00db4756a5bcb766e2eb03bf87ce31ed9f54096008",
+  "verified_at": "2026-10-03T19:25:55.665618+00:00"
+}

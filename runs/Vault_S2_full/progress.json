@@ -1,0 +1,44 @@
+{
+  "completed_chunks": 40,
+  "outputs": [
+    {
+      "bounds": [
+        10000001,
+        20000000,
+        10000
+      ],
+      "certificate": "certificates/census_10000001_20000000_10000_4cd1542dbe12.json",
+      "count": 250614,
+      "label": "sealed_region_2",
+      "score": "runs\\Vault_S2_full\\sealed_region_2\\score.json",
+      "sha256": "4cd1542dbe1264ef0510b43bc165cc1a761ef24b3e42ba65118406e65bde5415"
+    },
+    {
+      "bounds": [
+        20000001,
+        30000000,
+        10000
+      ],
+      "certificate": "certificates/census_20000001_30000000_10000_57e1388a33a8.json",
+      "count": 236411,
+      "label": "extension",
+      "score": "runs\\Vault_S2_full\\extension\\score.json",
+      "sha256": "57e1388a33a8e248154ffedbc83ce229cb5fba90c35729fcad6d7783716f7c94"
+    },
+    {
+      "bounds": [
+        10000001,
+        30000000,
+        10000
+      ],
+      "certificate": "certificates/census_10000001_30000000_10000_478aef5d3b6d.json",
+      "count": 487025,
+      "label": "enlarged_design",
+      "score": "runs\\Vault_S2_full\\enlarged_design\\score.json",
+      "sha256": "478aef5d3b6d09952fddef0189dc985ecec117f7ddff41c3769307ff8e9c577b"
+    }
+  ],
+  "status": "complete",
+  "total_chunks": 40,
+  "updated_at": "2026-10-03T20:33:12.923318+00:00"
+}

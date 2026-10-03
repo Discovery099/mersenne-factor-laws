@@ -1,6 +1,6 @@
 [project]
 name = "mersenne-factor-laws"
-version = "0.3.0"
+version = "0.4.0"
 description = "Exact Mersenne factor verification and preregistered census experiments"
 requires-python = ">=3.10"
 dependencies = []

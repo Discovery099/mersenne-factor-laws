@@ -1,43 +1,41 @@
-# State — v0.4 full-design execution authorized, 2026-10-03
+# State — v0.4 full committed design complete
 
-L003 is a zero-fit Poisson-binomial multiplicity law using L001's pair means.
-Power checks and prediction-only acceleration are implemented and validated.
-The fixed sealed region 2 predictions are retained unchanged. L002 versus N0
-was underpowered there (10.4732/10.4642 expected deviance gain), so the primary
-design was enlarged before commitment to C(10000001,30000000,10000).
-L002 versus N0 now has 20.3417/20.3242; L003 versus L001 34.5925/34.4777.
-All six primary pairs pass >=14 in both directions. The full pair matrices,
-three requested multiplicity cells and numerical checks are in the forecasts.
-
+2026-10-03T20:33:12.883594+00:00
 Prediction: predictions/Vault_S2_L001_L002_L003.json
 SHA-256: a4fb571f0c65367afec4b02d58dd5b5c6bc269bb252bb2ff4c3c17f40483d641
-Use mf.preregister_vault.registered to audit the Git/source/forecast chain.
+Commit: 0a3a73847f3f533dae5fcface0c0abd5099801cb
 
-The SHA was delivered before computation. The user then explicitly selected
-"Run the full committed design". The dedicated ops.vault_run adapter is being
-committed before execution. It runs at most two native processes, uses 500000
-wide chunks split at the sealed boundary, and checkpoints each engine and each
-dual-checker verification. Each invocation has a four-hour wall-time limit;
-completed work can be resumed without changing any law or prediction.
-Live execution state belongs in runs/Vault_S2_full/progress.json and manifest.json.
-Region 1 must not be rerun. See REGISTRATION.md for the scoring scopes.
+All 40 chunks passed two independent exhaustive engines and both factor
+checkers. The complete artifact audit passed. Execution has stopped; no
+background census or scheduled campaign remains. Region 1 was not rerun.
+See RESULTS.md and results/Vault_S2_full/RESULTS.md for counts and frozen scores.
 
-Validation: 36 test cases checked. The full run passed 35 and found one
-incomplete synthetic fixture; the corrected fixture's targeted rerun passed.
-No implementation failure remains. Numerical resolution differences are
-recorded in predictions/power/*.json. Original exact-checker source hashes
-and the v0.3 demonstration remain unchanged.
+Primary L003 gain over L001: 69.788577, threshold 14.
+Original region 2 L003 gain over L001: 35.487328.
+External operator confirmation of the original region 2 sealed hash is pending.
+The supplementary band is not operator sealed. Local Git chronology is an
+audit trail, not an independent timestamp. The composite score is not a p-value.
 
-SOURCE.md records the operator's external region 1 hash-match/scoring statement.
-The actual REVIEW_VAULT_S1_L001.md and SEEDS_P12_P13_full_records.md files still
-need accessible paths. The launch and P13 brief are different documents.
-Track 0 original-semantics reproduction remains pending the full seed records.
-The user's subsequent approximate region 1 L003 estimates were recorded as
-post-commit external commentary in data/sources/. They did not enter predictions.
+L003 is a zero-fit standard Poisson-binomial construction using L001's pair
+means. It was fixed before computation. All six primary law pairs passed
+the prospective expected-gain rule in both directions. This is not a theorem
+about independence or a claim of mathematical novelty; prior overlap remains.
 
-Historical L002_open_demo remains a failed, underpowered test; do not retune
-or retest that observed band. Novelty remains overlap-found; no new factor,
-new theorem, or successful vault outcome is claimed.
+All laws and prediction/source hashes are unchanged. Never refit and retest
+on these observed bands. The old L002_open_demo remains underpowered and
+failed; its immutable evidence and the original v0.3 sources are preserved.
 
-GIMPS assignments exist per the operator; sanitized details and future CPU/time
-budget remain pending. No assignment request or external submission occurred.
+SOURCE.md records the external region 1 review statement and the post-commit
+user-relayed estimates. Actual SEEDS_P12_P13_full_records.md and
+REVIEW_VAULT_S1_L001.md files still need accessible paths. The launch and P13
+brief are different documents. Track 0 original-semantics reproduction is pending.
+
+GIMPS assignments exist per the operator; sanitized assignment/client details
+and a future CPU/time cap remain pending. No external submission, assignment
+request, BSL experiment, credited factor or weeks-long campaign was initiated.
+
+Validation: 36 research/build cases checked, with the corrected synthetic
+fixture passing its targeted rerun, plus 4 runner and 1 report tests passed.
+Recorded native engine work: 1.023741 CPU-hours; overhead/checkers excluded.
+Audit saved evidence with python -m ops.vault_report. The older ops.verify
+deliberately re-enumerates all certificates and is substantially more expensive.

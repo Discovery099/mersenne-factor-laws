@@ -1,5 +1,12 @@
 # Alerts
 
+## Vault-S full committed design completed — 2026-10-03
+
+All 40 chunks and the final audit passed. See results/Vault_S2_full/RESULTS.md.
+L003 gain over L001: 69.788577 (full primary), 35.487328 (region 2).
+External operator confirmation of the original region 2 sealed hash is pending.
+Region 1 was not rerun; no model or prediction was changed.
+
 ## Vault-S region 2 and powered extension — 2026-10-03
 
 L001, L002, L003 and mandatory N0 predictions frozen in
@@ -9,8 +16,9 @@ Original sealed subregion: C(10000001,20000000,10000).
 Powered primary design: C(10000001,30000000,10000).
 The extra band is separately named and is not an operator-sealed vault.
 Every primary pair passes expected-gain >=14 in both directions.
-No region 2 or extension census was run. No region 1 rerun occurred.
-Deliver this SHA to the user before any subsequent census starts.
+At preregistration, neither region 2 nor its extension had been censused.
+The SHA was delivered before the user authorized the subsequently completed run.
+No region 1 rerun occurred.
 
 ## 2026-10-03 — C2 open demonstration, awaiting human review
 

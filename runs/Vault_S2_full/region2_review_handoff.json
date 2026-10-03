@@ -1,0 +1,16 @@
+{
+  "bounds": [
+    10000001,
+    20000000,
+    10000
+  ],
+  "certificate": "certificates/census_10000001_20000000_10000_4cd1542dbe12.json",
+  "count": 250614,
+  "full_design_still_running": true,
+  "label": "sealed_region_2",
+  "operator_hash_confirmation": false,
+  "prediction_sha256": "a4fb571f0c65367afec4b02d58dd5b5c6bc269bb252bb2ff4c3c17f40483d641",
+  "prepared_at": "2026-10-03T19:52:02.434466+00:00",
+  "score": "runs\\Vault_S2_full\\sealed_region_2\\score.json",
+  "sha256": "4cd1542dbe1264ef0510b43bc165cc1a761ef24b3e42ba65118406e65bde5415"
+}

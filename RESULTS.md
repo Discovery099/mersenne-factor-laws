@@ -1,4 +1,56 @@
-# Verified build results — v0.3
+# Verified results — v0.4
+
+The full committed design C(10000001,30000000,10000) is complete. All 40 chunks
+were independently enumerated by both C engines and accepted by the Python
+and C factor checkers. The subsequent artifact audit verified coverage,
+prediction chronology, frozen sources, hashes, certificate pairs and an
+independent summary recount. Region 1 was not rerun.
+
+Prediction SHA-256: `a4fb571f0c65367afec4b02d58dd5b5c6bc269bb252bb2ff4c3c17f40483d641`.
+Prediction commit: `0a3a73847f3f533dae5fcface0c0abd5099801cb`.
+
+| Scope | Inclusive p range | K | Factors | Census SHA-256 |
+|---|---|---:|---:|---|
+| sealed_region_2 | 10000001–20000000 | 10000 | 250,614 | `4cd1542dbe1264ef0510b43bc165cc1a761ef24b3e42ba65118406e65bde5415` |
+| extension | 20000001–30000000 | 10000 | 236,411 | `57e1388a33a8e248154ffedbc83ce229cb5fba90c35729fcad6d7783716f7c94` |
+| enlarged_design | 10000001–30000000 | 10000 | 487,025 | `478aef5d3b6d09952fddef0189dc985ecec117f7ddff41c3769307ff8e9c577b` |
+
+The primary design is the union of the first two rows; these are overlapping
+reports of one run, not three independent replications. The extension was
+preregistered but is not an operator-sealed vault. External operator confirmation of the original region 2 sealed hash is pending.
+
+| Law | Full primary composite deviance | Gain over N0 | Threshold 14 met |
+|---|---:|---:|---|
+| L001 | 97.667317 | 484.547087 | True |
+| L002 | 538.633081 | 43.581323 | True |
+| L003 | 27.878740 | 554.335664 | True |
+
+L003 improves over L001 by **69.788577** on the enlarged primary
+design and **35.487328** on the original region 2. Their factor-count
+expectations coincide, so this contrast comes entirely from multiplicity.
+The original region 2 N0/L002 comparison remains underpowered and has no
+standalone confirmatory verdict.
+
+These scores are the prescribed overlapping-cell diagnostic, not calibrated
+p-values or a proof of independence. The result evaluates the standard finite
+Bernoulli correction; no new theorem, factor discovery or novelty is claimed.
+Do not refit laws and retest them on these now-observed bands.
+
+Detailed predictions, multiplicity cells, alternate score groups and audit:
+[Vault-S results](results/Vault_S2_full/RESULTS.md),
+[audit JSON](results/Vault_S2_full/audit.json).
+Recorded native engine work: 1.023741 CPU-hours, excluding checkers, build,
+aggregation, prediction and audit work. The supervisor has completed and stopped.
+
+Validation history: 36 research/build test cases checked (35 in the full run,
+then the corrected incomplete fixture in a targeted passing rerun); four new
+execution-adapter tests and one independent-recount test passed. The actual
+census also passed all dual-engine and dual-checker validations above.
+
+## Historical v0.3 build results
+
+The following is the retained earlier build report; its pending-work statements
+describe that earlier stage. The v0.4 status above supersedes them.
 
 26 test groups pass. All 5 immutable census certificates were
 rechecked with both factor checkers and both exhaustive engines.

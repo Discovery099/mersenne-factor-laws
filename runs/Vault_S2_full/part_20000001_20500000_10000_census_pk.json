@@ -1,0 +1,16 @@
+{
+  "attempt": 1,
+  "binary_sha256": "e71e473017b74c695881ba169c815e965ec9251665ec69c76cdfbac9f4574c31",
+  "bounds": [
+    20000001,
+    20500000,
+    10000
+  ],
+  "completed_at": "2026-10-03T19:50:25.210447+00:00",
+  "count": 12031,
+  "cpu_s": 79.09375,
+  "engine": "census_pk",
+  "sha256": "6ee6f8e5aa3f4fede7c397bd8e6586dc0c7bc0ab79cfeb44fc50b291d568bbdf",
+  "started_at": "2026-10-03T19:48:52.888097+00:00",
+  "wall_s": 92.25
+}
