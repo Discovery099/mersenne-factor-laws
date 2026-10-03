@@ -1,8 +1,11 @@
 # Sources and access record — 2026-10-03
 
 Seed IDs: **01002** (primary, A02), **00302** (A02), **00902** (A02).
-Only the summaries in `TASK.md` were supplied; no original seed archive was
-available. The original brief and the two supplied ZIP fingerprints are retained.
+The initial build used only the summaries in `TASK.md`. On 2026-10-03 the
+operator named `SEEDS_P12_P13_full_records.md` as the full seed source. That
+attachment is not yet accessible at a local path; its contents and fingerprint
+remain pending. Track 0's original-semantics audit therefore remains pending.
+The original brief and the two supplied ZIP fingerprints are retained.
 
 Novelty state: **overlap-found**. This is not an expert-reviewed distinction.
 
@@ -42,6 +45,25 @@ Novelty state: **overlap-found**. This is not an expert-reviewed distinction.
 11. [GNU GMP 6.3.0 source archive](https://ftp.gnu.org/gnu/gmp/gmp-6.3.0.tar.xz).
     mini-gmp C/header and upstream license texts are pinned in `vendor/`;
     `vendor/PROVENANCE.json` records archive and file SHA-256 hashes.
+12. **External operator review, Vault-S region 1 (2026-10-03).** Source:
+    the operator's message in this chat, naming `REVIEW_VAULT_S1_L001.md`.
+    The operator states that the v0.2 census SHA-256 matched the sealed
+    region 1 hash exactly and that L001 was scored against the sealed values.
+    This is an externally reported confirmation, not a new local rerun or an
+    independently inspected review document. The named Markdown attachment
+    is not yet accessible; document bytes, SHA-256, precise scores and any
+    reviewer qualifications are pending receipt. No numeric score or pass/fail
+    verdict is inferred from the statement. Region 1 has not been rerun for
+    this request and must not be used for fitting L003.
+13. [Hong, On computing the distribution function for the Poisson binomial
+    distribution (2013)](https://www.sciencedirect.com/science/article/pii/S0167947312003568).
+    Publisher abstract inspected on 2026-10-03 for the independent,
+    nonidentical Bernoulli-sum definition. L003 uses direct coefficient
+    recursion; the source does not establish independence of Mersenne factors.
+14. [Linderman, Exponential families, Stanford STATS 305B](https://slinderman.github.io/stats305b/lectures/04_expfam.html).
+    Course notes inspected on 2026-10-03 for the Poisson KL identity. The
+    expected deviance formula in `POWER_PROTOCOL.md` also follows directly
+    by cancellation and is unit-tested by summing over Poisson outcomes.
 
 ## Access restrictions and missing live measurements
 

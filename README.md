@@ -1,9 +1,16 @@
-# Mersenne factor laws — Windows build v0.3
+# Mersenne factor laws — Windows build v0.4
 
 Exact Python + C verification, independent exhaustive censuses, immutable
 certificates, preregistered predictions, and bounded resumable jobs.
 Built from the P12 brief, with the supplied v0.1/v0.2 sources inspected and
 preserved under `archive/supplied-source/`. Original ZIPs remain untouched.
+
+The v0.4 research additions implement zero-fit L003 multiplicity predictions,
+prospective power checks, a scalable prediction-only engine, and a multi-law
+registration for the fixed Vault-S region 2 plus a separately named extension.
+See `REGISTRATION.md` and `POWER_PROTOCOL.md`. Neither band has been censused
+by this request, and region 1 has not been rerun. The original exact-tool and
+v0.3 experiment source fingerprints remain unchanged.
 
 ## Build and verify
 
@@ -17,7 +24,9 @@ This builds the three native executables, runs the tests, and rechecks every
 certificate using both independent factor checkers and exhaustive engines.
 Python 3.10+ and GCC/Clang with unsigned 128-bit arithmetic are required.
 GNU mini-gmp 6.3.0 is vendored with licenses and pinned file hashes; there are
-no Python package dependencies. Windows uses MinGW-w64; no WSL is needed.
+no Python package dependencies for the exact tools. The accelerated research
+predictor and its additional tests use NumPy (`requirements-research.txt`).
+Windows uses MinGW-w64; no WSL is needed.
 
 On Linux/macOS with an appropriate GCC/Clang compiler:
 

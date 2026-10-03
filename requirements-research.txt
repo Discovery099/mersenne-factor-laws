@@ -1,0 +1,3 @@
+# Only the accelerated prospective predictor uses NumPy.
+# Exact factor checkers and census engines remain independent of it.
+numpy==2.4.1

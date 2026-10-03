@@ -1,38 +1,37 @@
-# State — v0.3 handoff, campaign day 0
+# State — v0.4 prospective registration, 2026-10-03
 
-Verified local build complete. 26 tests; 5 dual-checker/dual-engine
-certificates with counts 46, 215, 520, 5773, 312 (bounds in RESULTS.md).
-Novelty: overlap-found. No new-factor or theorem claim.
+L003 is a zero-fit Poisson-binomial multiplicity law using L001's pair means.
+Power checks and prediction-only acceleration are implemented and validated.
+The fixed sealed region 2 predictions are retained unchanged. L002 versus N0
+was underpowered there (10.4732/10.4642 expected deviance gain), so the primary
+design was enlarged before commitment to C(10000001,30000000,10000).
+L002 versus N0 now has 20.3417/20.3242; L003 versus L001 34.5925/34.4777.
+All six primary pairs pass >=14 in both directions. The full pair matrices,
+three requested multiplicity cells and numerical checks are in the forecasts.
 
-L002-OPEN prediction commit d47690fe9303c28df9572b3442e93481b42d5b53 preceded
-computation. Observed 312; N0 336.8895; L002 335.9436. Gain 1.1391<14: failed.
-Residuals retained in runs/L002_open_demo/score.json and DEAD_ENDS.md.
-Do not retest edited models on this band.
+Prediction: predictions/Vault_S2_L001_L002_L003.json
+SHA-256: a4fb571f0c65367afec4b02d58dd5b5c6bc269bb252bb2ff4c3c17f40483d641
+Use mf.preregister_vault.registered to audit the Git/source/forecast chain.
 
-Supervisor completed on first attempt and stopped; zero active workers.
-Queue retains completed demo for audit. Logs/status in ops/runtime;
-checkpoint runs/L002_open_demo. No perpetual process or automation installed.
+STOP BEFORE CENSUS: the user must receive this hash before computation.
+Neither region 2 nor the supplementary band has been censused in this request.
+Region 1 must not be rerun. No new census is queued; no background campaign
+or automation was installed. See REGISTRATION.md for the scoring scopes.
 
-Acceptance source fingerprints: CHECKERS.sha256. Targets: TARGETS.sha256.
-Hardware: 4 logical CPUs, 12.67 GB RAM, Windows 10, GCC 16.1.0, Python 3.12.14.
-Experiment CPU hours recorded: 0.004523; see META.json for accounting limits.
+Validation: 36 test cases checked. The full run passed 35 and found one
+incomplete synthetic fixture; the corrected fixture's targeted rerun passed.
+No implementation failure remains. Numerical resolution differences are
+recorded in predictions/power/*.json. Original exact-checker source hashes
+and the v0.3 demonstration remain unchanged.
 
-User supplied v0.1/v0.2 ZIPs. Source-only snapshots and archive hashes are in
-archive/. Previously computed vault values were not imported or rescored.
-L001 is the supplied formula adapter; L002 is a separate failed experiment.
-Faithful seed reproduction remains blocked by missing original definitions.
+SOURCE.md records the operator's external region 1 hash-match/scoring statement.
+The actual REVIEW_VAULT_S1_L001.md and SEEDS_P12_P13_full_records.md files still
+need accessible paths. The launch and P13 brief are different documents.
+Track 0 original-semantics reproduction remains pending the full seed records.
 
-Operator confirms GIMPS assignments but account/export/client paths and CPU
-cap remain pending. Discovery planning/result adapters are ready for these.
-No account creation, assignment request or external submission occurred.
+Historical L002_open_demo remains a failed, underpowered test; do not retune
+or retest that observed band. Novelty remains overlap-found; no new factor,
+new theorem, or successful vault outcome is claimed.
 
-Next three actions:
-1. Import sanitized owned assignments and current known-factor/bounds exports.
-2. Commit L001 versus N0 predictions for fresh C(220001,225000,1000), then run.
-3. Validate scalable prediction numerics before larger grids or rolling vaults.
-
-Reflection: Independent enumeration reproduces all required finite regression
-cases. The reference's MR bound needed correction, and literature establishes
-prior overlap. The first prospective experiment supplies negative evidence for
-L002, which is retained rather than revised on the same data. The remaining
-work is research and operator-dependent discovery, not hidden completed work.
+GIMPS assignments exist per the operator; sanitized details and future CPU/time
+budget remain pending. No assignment request or external submission occurred.

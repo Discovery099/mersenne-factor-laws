@@ -22,3 +22,16 @@ Disjoint dyadic improvement: 0.13905506662327483; total-only improvement:
 Frozen residuals: runs/L002_open_demo/score.json. Prediction SHA-256:
 c8c35b53f2e6e396e5218e5938dafaa8e7ed290123dce1172c4179432a0b3755.
 Do not edit L002 and retest on this same cell. Any revised law needs a new band.
+
+## Prospective power rejection — Vault-S region 2 only, 2026-10-03
+
+The fixed region C(10000001,20000000,10000) gives expected full-summary gains
+10.473212809597397 / 10.464227183461283 for N0 versus L002, below 14 in both
+directions. This design was rejected before registration or census. Its
+prediction-only evidence is predictions/power/Vault_S2.json. The prospective
+design was enlarged to p<=30000000 with K unchanged; the original sealed
+subregion remains separate. No law was fitted to outcomes during this step.
+
+The earlier L002_open_demo was also underpowered: 335.9436 versus 336.8895
+in its total-count cell. Its recorded failure remains historical; it is not
+repeated under the new rule.

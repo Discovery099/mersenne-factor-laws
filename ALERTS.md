@@ -1,5 +1,17 @@
 # Alerts
 
+## Vault-S region 2 and powered extension — 2026-10-03
+
+L001, L002, L003 and mandatory N0 predictions frozen in
+`predictions/Vault_S2_L001_L002_L003.json`.
+SHA-256: `a4fb571f0c65367afec4b02d58dd5b5c6bc269bb252bb2ff4c3c17f40483d641`.
+Original sealed subregion: C(10000001,20000000,10000).
+Powered primary design: C(10000001,30000000,10000).
+The extra band is separately named and is not an operator-sealed vault.
+Every primary pair passes expected-gain >=14 in both directions.
+No region 2 or extension census was run. No region 1 rerun occurred.
+Deliver this SHA to the user before any subsequent census starts.
+
 ## 2026-10-03 — C2 open demonstration, awaiting human review
 
 C(200001,210000,1000) has **312 factors**, independently enumerated and checked.
