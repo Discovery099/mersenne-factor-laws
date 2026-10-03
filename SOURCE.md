@@ -64,6 +64,12 @@ Novelty state: **overlap-found**. This is not an expert-reviewed distinction.
     Course notes inspected on 2026-10-03 for the Poisson KL identity. The
     expected deviance formula in `POWER_PROTOCOL.md` also follows directly
     by cancellation and is unit-tested by summing over Poisson outcomes.
+15. [User-relayed post-commit assessment](data/sources/operator_note_after_preregistration_2026-10-03.md).
+    Received after prediction commitment `0a3a738` and delivery of its SHA-256.
+    Reports region 1 observations and approximate L003 estimates; the proposed
+    explanation and sigma estimates are attributed external commentary, not
+    independently checked results. None entered the frozen predictions.
+    The user subsequently explicitly authorized the full committed design.
 
 ## Access restrictions and missing live measurements
 
