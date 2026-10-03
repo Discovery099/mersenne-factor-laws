@@ -55,6 +55,9 @@ Novelty state: **overlap-found**. This is not an expert-reviewed distinction.
     reviewer qualifications are pending receipt. No numeric score or pass/fail
     verdict is inferred from the statement. Region 1 has not been rerun for
     this request and must not be used for fitting L003.
+    Access rechecked on 2026-10-04: the named document was not found in the
+    project or Downloads. The revised report gives this relayed confirmation
+    its own section, without presenting the missing review as inspected.
 13. [Hong, On computing the distribution function for the Poisson binomial
     distribution (2013)](https://www.sciencedirect.com/science/article/pii/S0167947312003568).
     Publisher abstract inspected on 2026-10-03 for the independent,

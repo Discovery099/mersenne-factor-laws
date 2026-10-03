@@ -48,3 +48,10 @@ The two closeout report tests pass, including rejection of a mismatched external
 No further P12 census, model fitting, P15 experiment or market action was launched.
 The built-in LaTeX compiler failed at host setup; a separately typeset ReportLab PDF is provided.
 The missing original seed/review files remain unresolved legacy inputs, not claimed completed work.
+
+Report revision, 2026-10-04: a separate region 1 section attributes the earlier
+hash-match statement and historical multiplicity observations to their saved
+sources. The named region 1 review is still missing. The report and README
+now include a code/data map and separate saved-audit and computational-replay
+instructions. No public repository URL or archive DOI is recorded, and no
+project-wide reuse licence has been declared. No new census was performed.

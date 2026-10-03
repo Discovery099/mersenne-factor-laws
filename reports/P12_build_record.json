@@ -4,18 +4,22 @@
   "checks": {
     "all_four_fingerprints_in_pdf": true,
     "author_metadata": true,
+    "code_data_paths_and_commands_checked_against_repository": true,
     "frozen_sources_and_experiment_artifacts_unchanged": true,
     "key_numeric_results_in_pdf": true,
-    "page_count": 4,
+    "page_count": 5,
+    "public_repository_and_doi_not_recorded": true,
+    "region_1_review_document_still_missing": true,
+    "region_1_statement_attributed_to_existing_messages": true,
     "text_within_page_bounds": true
   },
-  "companion_latex_sha256": "104a17145d2bbe77ce52d099db4431fe4b81943277550f67c55624c4ad3b3c29",
+  "companion_latex_sha256": "244158f7fd4ec0b00dac0c61d0d1e702845c7fd8af60752d6585d04dfc6406da",
   "latex_compilation": "unavailable: built-in host could not find standard directories",
-  "pages": 4,
+  "pages": 5,
   "pdf": "output\\pdf\\P12_Chris_Miki.pdf",
   "pdf_backend": "ReportLab",
-  "pdf_sha256": "890c60e865f715e26aebea374661da4f1ca2f1519514afdaac1016026b66aa03",
+  "pdf_sha256": "d94b94449400e2cf4fa31e0d3232e8b2ecb1711924a0c75e3d78bd600a618e26",
   "prediction_sha256": "a4fb571f0c65367afec4b02d58dd5b5c6bc269bb252bb2ff4c3c17f40483d641",
-  "reviewed_at": "2026-10-03T22:18:46.626061+00:00",
-  "visual_review": "passed: all four Poppler-rendered pages inspected"
+  "reviewed_at": "2026-10-03T23:11:35.000820+00:00",
+  "visual_review": "passed: all five Poppler-rendered pages inspected"
 }

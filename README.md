@@ -5,6 +5,11 @@ records exact counts, the externally reported region 2 match, the missing
 external pre-run timestamp, model comparisons and residuals. Editable source:
 [reports/P12_Chris_Miki.tex](reports/P12_Chris_Miki.tex).
 
+The 4 October revision adds a separate region 1 provenance section and a
+code-and-data statement. Region 1's hash match and two historical observations
+are attributed to the messages recorded in `SOURCE.md`; the actual
+`REVIEW_VAULT_S1_L001.md` file is still pending. No census was rerun for this revision.
+
 Exact Python + C verification, independent exhaustive censuses, immutable
 certificates, preregistered predictions, and bounded resumable jobs.
 Built from the P12 brief, with the supplied v0.1/v0.2 sources inspected and
@@ -17,6 +22,56 @@ See `REGISTRATION.md` and `POWER_PROTOCOL.md`. The user authorized the full
 committed census after receiving the prediction SHA-256. Execution state is
 recorded in `runs/Vault_S2_full/progress.json`; region 1 has not been rerun.
 The original exact-tool and v0.3 experiment source fingerprints remain unchanged.
+
+## Code and data availability
+
+The complete experiment is retained in this local Git repository. No public
+repository URL or archive DOI is recorded in this revision. Public access is
+pending; this statement does not claim that readers can already download a
+published deposit. No project-wide reuse licence is declared. The vendored
+GNU mini-gmp files retain their upstream licence texts in `vendor/`.
+
+Reproducibility materials:
+
+- `mf/`, `laws/`, `ops/`, `tests/`: exact engines and checkers, models, execution and validation.
+- `predictions/Vault_S2_L001_L002_L003.json`: frozen forecasts and source hashes, with links to the prospective power artifacts.
+- `runs/Vault_S2_full/`: both engines' 40 chunk outputs, run records, and regional and union subdirectories containing `census.txt`, `summary_cells.json` and `score.json`.
+- `certificates/`: explicit factor pairs and verification records; `results/Vault_S2_full/`: audit and result tables.
+- `REGISTRATION.md`, `POWER_PROTOCOL.md`, `SOURCE.md` and `data/sources/`: design, source provenance and attributed external confirmations.
+
+Preserve full Git history and all tracked run data when sharing or cloning.
+The audit checks prediction commit `0a3a73847f3f533dae5fcface0c0abd5099801cb`
+and execution provenance; completed results were committed as
+`b1540d0360028c7982f58c24481e8707f62e7454`. A shallow checkout or source-only
+ZIP cannot supply that history. `.gitattributes` preserves exact file bytes.
+
+For a saved-artifact audit, use Python 3.10+ and Git, then run from this root:
+
+```sh
+python -m ops.vault_report
+```
+
+This checks existing evidence and frozen scores and refreshes the generated
+audit and result tables. It does not run a census, repeat primality checks or
+create an external pre-run timestamp. Audit timestamps may change; the
+canonical census and prediction fingerprints must stay fixed.
+
+For independent computational replay, use a separate full checkout, Python
+3.12 (3.12.14 was used here), Git and a C11 GCC/Clang compiler with unsigned
+128-bit support (MinGW-w64 on Windows), then run:
+
+```sh
+python -m pip install -r requirements-research.txt
+python -m ops.build
+python -m unittest discover -s tests -v
+python -m ops.verify
+```
+
+The last command checks every stored certificate with both factor checkers
+and repeats every stored census with both engines, including overlapping
+regional and union certificates. It is substantially more expensive than the
+saved-artifact audit. Compare the canonical hashes listed in the report.
+Such replays are verification of observed data, not fresh sealed tests.
 
 ## Build and verify
 

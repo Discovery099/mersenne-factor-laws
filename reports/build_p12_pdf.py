@@ -54,7 +54,7 @@ def build():
     def fmt(v): return f'{v:,.3f}'
 
     p('Exact Mersenne Factor Censuses<br/>and a Finite Bernoulli Multiplicity Model','title')
-    p('<b>Chris Miki</b><br/>3 October 2026 | P12 technical report','small')
+    p('<b>Chris Miki</b><br/>4 October 2026 | P12 technical report, revised','small')
     p('<b>Abstract.</b> Two independent exhaustive programs found 487,025 prime-factor pairs for prime exponents '
       '10,000,001 ≤ p ≤ 30,000,000 and k ≤ 10,000 in q = 2kp + 1. Independent checkers accepted every pair. '
       'A user-relayed external operator confirmation reports an exact match to the original region 2 withheld '
@@ -152,7 +152,7 @@ def build():
       'was not supplied. These results establish neither a new arithmetic repulsion law nor that every '
       'residual is ordinary noise. No law was refitted after observing these outcomes.','small')
 
-    newpage();p('5. Sealed comparison, provenance and closeout','h1')
+    newpage();p('5. Sealed comparisons and provenance','h1')
     p('The local record places prediction commitment at 18:40:13 UTC on 3 October 2026, before the '
       'census began at approximately 18:59 UTC. The user authorized the full design after receiving the '
       'fingerprint in this chat. Models, predictions, scoring and prospective bounds stayed fixed. '
@@ -161,8 +161,17 @@ def build():
     p('A later user-relayed operator message confirms an exact match to the withheld region 2 census '
       'hash and all four cells: 250,614 factors, A₁ = 206,852, A₂ = 38,568 and maximum 5. '
       'The local agent did not inspect the original withheld file or independently establish the '
-      'operator\'s identity. An earlier region 1 match was also reported; its named review document '
-      'remains unavailable, and region 1 was not rerun.')
+      'operator\'s identity.')
+    p('Earlier region 1: reported confirmation','h2')
+    p('The user previously relayed that an independent operator matched the v0.2 region 1 census '
+      'hash to the sealed hash exactly and scored L001 against withheld values. SOURCE.md, item 12, '
+      'records this external statement. The named document REVIEW_VAULT_S1_L001.md remains unavailable '
+      'to this checkout as of 4 October 2026, so its full hash, exact score and review qualifications '
+      'cannot be transcribed or independently checked here. Region 1 was not rerun.')
+    p('A separate post-commit note reports region 1 observations A₁ = 240,726 and A₂ = 56,673 '
+      '(SOURCE.md, item 15). These are attributed historical observations, not locally recertified '
+      'results; the note\'s approximate L003 estimates are not a preregistered region 1 test. '
+      'None of these estimates entered the frozen region 2 predictions.')
     p('<b>Protocol qualification.</b> The operator reports that the prediction fingerprint was not relayed '
       'to them before computation. Prediction-first ordering has local Git and execution evidence, '
       'but no independently witnessed pre-run receipt. The later outcome match does not repair this '
@@ -174,10 +183,43 @@ def build():
     for label,sha in [('Prediction',audit['registration']['prediction_sha256']),
                       *[(labels[s]+' census',records[s]['output']['sha256']) for s in ('sealed_region_2','extension','enlarged_design')]]:
         p('<b>'+label+'</b>','small');p(sha,'mono')
-    p('The repository retains raw outputs, certificates, forecasts, scores and the attributed external '
-      'review. Run <font name="Courier" size="9">python -m ops.vault_report</font> to audit saved '
-      'evidence and recompute scores without another census. Native engine work was 1.023741 CPU-hours; '
-      'checkers, predictions, aggregation and other overhead are excluded.','small')
+    p('Native engine work was 1.023741 CPU-hours; checkers, predictions, aggregation and other overhead '
+      'are excluded.','small')
+
+    newpage();p('6. Code and data availability','h1')
+    p('Code, predictions, complete census outputs, certificates and this report are retained in the local '
+      'mersenne-factor-laws Git repository. No public repository URL or archive DOI is recorded in this '
+      'version; public access remains pending. No project-wide reuse licence is declared; vendored GNU '
+      'mini-gmp retains its accompanying upstream licence texts.','small')
+    p('Reproducibility materials','h2')
+    p('<b>Code:</b> mf/, laws/, ops/ and tests/ contain both checkers, both engines, models, runner and validation. '
+      '<b>Protocol:</b> REGISTRATION.md and POWER_PROTOCOL.md document the design; the frozen prediction '
+      'bundle includes source hashes and links to prospective forecasts:','small')
+    p('predictions/Vault_S2_L001_L002_L003.json','mono')
+    p('<b>Data:</b> runs/Vault_S2_full/ retains both engines\' 40 chunk outputs and execution records. '
+      'Its sealed_region_2, extension and enlarged_design subdirectories each contain census.txt, '
+      'summary_cells.json and score.json. <b>Evidence:</b> certificates/ stores explicit pairs and '
+      'verification records; results/Vault_S2_full/ stores the aggregate audit and tables; SOURCE.md '
+      'and data/sources/ record literature and attributed reviews.','small')
+    p('Audit the saved experiment','h2')
+    p('Use a full, non-shallow checkout with all tracked data and history containing the prediction and '
+      'results commits in section 5. A source-only ZIP cannot establish the Git provenance checked by '
+      'the audit. From the repository root, with Python 3.10+ and Git available, run:','small')
+    p('python -m ops.vault_report','mono')
+    p('This checks saved bytes, source provenance, coverage, certificates and counts, recomputes the frozen '
+      'scores and refreshes audit outputs. It does not enumerate factors or supply an external timestamp.','small')
+    p('Recompute the censuses','h2')
+    p('For independent replay, use Python 3.12 (the original run used 3.12.14), Git and GCC or Clang with '
+      'C11 and unsigned 128-bit support; Windows uses MinGW-w64. From a separate checkout, run:','small')
+    p('python -m pip install -r requirements-research.txt<br/>'
+      'python -m ops.build<br/>'
+      'python -m unittest discover -s tests -v<br/>'
+      'python -m ops.verify','mono')
+    p('The last command rechecks every stored certificate with both checkers and re-enumerates every '
+      'stored census with both engines, including overlapping regional and union certificates. This '
+      'takes substantially more work than the saved-artifact audit. Compare canonical hashes with '
+      'section 5; replay is verification, not a new sealed test. No census was rerun for this revision. '
+      'Further command details are in README.md.','small')
     p('<b>Conclusion.</b> This bounded P12 comparison is closed as empirical confirmation, with a '
       'documented residual and provenance limitation. No new theorem, law or credited factor is claimed. '
       'These observed bands must not be reused as fresh tests of revised models.','small')
@@ -199,7 +241,7 @@ def build():
         canvas.saveState(); w,h=A4
         canvas.setStrokeColor(colors.HexColor('#CFD7DE'));canvas.setLineWidth(0.4);canvas.line(70,47,w-70,47)
         canvas.setFont('Body',7.5);canvas.setFillColor(gray)
-        canvas.drawString(70,33,'Chris Miki | P12 | 3 October 2026')
+        canvas.drawString(70,33,'Chris Miki | P12 | Revised 4 October 2026')
         canvas.drawRightString(w-70,33,str(doc.page));canvas.restoreState()
     doc=SimpleDocTemplate(str(out),pagesize=A4,rightMargin=70,leftMargin=70,topMargin=46,bottomMargin=60,
                           title='Exact Mersenne Factor Censuses and a Finite Bernoulli Multiplicity Model',author='Chris Miki')

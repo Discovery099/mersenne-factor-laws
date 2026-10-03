@@ -12,7 +12,7 @@
 \newcommand{\sha}[1]{{\scriptsize\ttfamily #1}\par}
 \title{Exact Mersenne Factor Censuses\\and a Finite Bernoulli Multiplicity Model}
 \author{Chris Miki}
-\date{3 October 2026 \quad\textnormal{--- P12 technical report}}
+\date{4 October 2026 \quad\textnormal{--- P12 technical report, revised}}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -202,7 +202,7 @@ establish neither a new arithmetic repulsion law nor that every residual
 is ordinary noise. No model was refitted after these outcomes were seen.
 
 \newpage
-\section{Sealed comparison, provenance and closeout}
+\section{Sealed comparisons and provenance}
 The local record places the prediction commit at 18:40:13 UTC on
 3 October 2026, before the census started at approximately 18:59 UTC.
 The user authorized the full committed design after fingerprint delivery
@@ -215,9 +215,22 @@ The later user-relayed operator confirmation states that region 2's
 250,614 factors, $A_1=206{,}852$, $A_2=38{,}568$, maximum 5 and census
 hash exactly match the withheld values. This is attributed external
 corroboration: the local agent did not inspect the original withheld file
-or independently establish the operator's identity. An earlier region 1
-hash match was also reported, but its named review document remains
-unavailable and region 1 was not recomputed for this work.
+or independently establish the operator's identity.
+
+\textbf{Earlier region 1: reported confirmation.} The user previously
+relayed that an independent operator had matched the v0.2 region 1 census
+hash to the sealed hash exactly and scored L001 against the withheld values.
+This statement is recorded as an external source in \texttt{SOURCE.md},
+item 12. The named document \texttt{REVIEW\_VAULT\_S1\_L001.md} remains
+unavailable to this checkout as of 4 October 2026, so its full hash, exact
+score and review qualifications cannot be transcribed or independently
+checked here. Region 1 was not rerun.
+
+A separate post-commit note reports region 1 observations
+$A_1=240{,}726$ and $A_2=56{,}673$ (\texttt{SOURCE.md}, item 15).
+These are attributed historical observations, not locally recertified
+results; the note's approximate L003 estimates are not a preregistered
+region 1 test. None of these estimates entered the frozen region 2 predictions.
 
 \textbf{Protocol qualification.} The operator reports that the prediction
 fingerprint was \emph{not} relayed to them before computation. Therefore
@@ -240,12 +253,61 @@ Extension census:\[-0.6em]
 Full-design census:\[-0.6em]
 \sha{478aef5d3b6d09952fddef0189dc985ecec117f7ddff41c3769307ff8e9c577b}
 
-The repository retains raw outputs from both engines, certificates, forecasts,
-score tables and the attributed review in \texttt{data/sources/}.
-\texttt{python -m ops.vault\_report} audits saved evidence and recomputes
-the frozen scores without another census. Recorded native engine work was
-1.023741 CPU-hours; checkers, prediction, aggregation and other overhead
-are excluded.
+Recorded native engine work was 1.023741 CPU-hours; checkers, prediction,
+aggregation and other overhead are excluded.
+
+\newpage
+\section{Code and data availability}
+Code, predictions, complete census outputs, certificates and the report
+are retained in the local \texttt{mersenne-factor-laws} Git repository.
+No public repository URL or archive DOI is recorded in this version;
+public access remains pending. No project-wide reuse licence is declared;
+vendored GNU mini-gmp retains its accompanying upstream licence texts.
+
+The repository includes the following reproducibility materials:
+\begin{itemize}\small
+\item \texttt{mf/}, \texttt{laws/}, \texttt{ops/} and \texttt{tests/}:
+checkers, both exhaustive engines, models, runner and validation.
+\item \texttt{predictions/Vault\_S2\_L001\_L002\_L003.json}:
+frozen predictions, source hashes and links to the prospective forecasts.
+\texttt{REGISTRATION.md} and \texttt{POWER\_PROTOCOL.md} document the design.
+\item \texttt{runs/Vault\_S2\_full/}: both engines' 40 chunk outputs,
+execution records, and the \texttt{sealed\_region\_2}, \texttt{extension}
+and \texttt{enlarged\_design} subdirectories, each with
+\texttt{census.txt}, \texttt{summary\_cells.json} and \texttt{score.json}.
+\item \texttt{certificates/}: explicit pairs and verification records.
+\texttt{results/Vault\_S2\_full/}: aggregate audit and result tables.
+\texttt{SOURCE.md} and \texttt{data/sources/}: literature and attributed reviews.
+\end{itemize}
+
+\textbf{Audit the saved experiment.} Use a full, non-shallow Git checkout
+with all tracked data and the history containing the prediction and results
+commits listed in section 5. A source-only ZIP cannot establish the Git
+provenance checked by the audit. From the repository root, with Python
+3.10+ and Git available, run:
+\begin{verbatim}
+python -m ops.vault_report
+\end{verbatim}
+This checks saved bytes, source provenance, coverage, certificates and
+summary counts, recomputes the frozen scores, and refreshes the audit
+outputs. It does not enumerate factors or supply an external timestamp.
+
+\textbf{Recompute the censuses.} For an independent computational replay,
+use Python 3.12 (the original run used 3.12.14), Git and GCC or Clang with
+C11 and unsigned 128-bit support; Windows uses MinGW-w64. From a separate
+checkout, install the pinned research dependency and run:
+\begin{verbatim}
+python -m pip install -r requirements-research.txt
+python -m ops.build
+python -m unittest discover -s tests -v
+python -m ops.verify
+\end{verbatim}
+The final command rechecks every stored certificate with both checkers and
+re-enumerates every stored census with both engines, including overlapping
+regional and union certificates. It is substantially more work than the
+saved-artifact audit. Compare canonical census hashes with section 5;
+recomputed outcomes are verification, not new sealed tests. No census was
+rerun for this report revision. Further command details are in \texttt{README.md}.
 
 \textbf{Conclusion.} This bounded P12 comparison is closed as an empirical
 confirmation with a documented residual and a documented provenance
