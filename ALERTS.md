@@ -1,20 +1,26 @@
 # Alerts
 
-## 2026-10-03 — operator inputs pending
+## Preregistration L002_open_demo
+
+Bounds [200001, 210000, 1000]; law laws/L002.py; SHA-256 `c8c35b53f2e6e396e5218e5938dafaa8e7ed290123dce1172c4179432a0b3755`.
+Prediction created before census; awaiting computation.
+
+
+## 2026-10-03 â€” operator inputs pending
 
 Operator confirmed having GIMPS assignments. Need sanitized active assignment
 export, account name, installed client/tool paths and CPU/time cap to select the
 discovery band. Dated known-factor and completed-bound exports are needed;
 restricted report routes were not scraped. No submission has occurred.
 
-## 2026-10-03 — reference MR correction
+## 2026-10-03 â€” reference MR correction
 
 Supplied reference is preserved byte-for-byte. Acceptance uses thirteen prime
 bases through 41 to support the advertised bound. The twelve-base pseudoprime
 is a permanent regression test. See SPEC.md and SOURCE.md.
 
-## 2026-10-03 — prior overlap and imported archives
+## 2026-10-03 â€” prior overlap and imported archives
 
-Shanks–Kravitz tables and Wagstaff's heuristic overlap this proposal. Novelty
+Shanksâ€“Kravitz tables and Wagstaff's heuristic overlap this proposal. Novelty
 state is overlap-found. Original v0.1/v0.2 source snapshots and ZIP hashes are
 retained; historical vault results are not imported into current model work.
