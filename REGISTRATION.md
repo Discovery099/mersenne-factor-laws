@@ -78,3 +78,12 @@ The enlarged design clears every primary pair in both directions. Its
 N0/L002 expected gains are 20.3416727289 and 20.3242323141; its
 L001/L003 expected gains are 34.5925398439 and 34.4777306891.
 No census outcome is contained in these files.
+
+## Authorized census execution
+
+After receipt of the prediction SHA, the user explicitly authorized the full
+committed design. The dedicated runner is `ops.vault_run`; progress is stored
+in `runs/Vault_S2_full/progress.json` and appears under `vault_full_design` in
+`python -m ops.supervisor status`. It executes at most two native engines at
+once and retains independent per-engine checkpoints and verification records.
+The source and prediction hashes remain frozen throughout this execution.

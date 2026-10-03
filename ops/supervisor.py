@@ -161,12 +161,17 @@ def status():
     heartbeat = ROOT / "HEARTBEAT"
     age = None
     if heartbeat.exists():
-        age = (datetime.now(timezone.utc) - datetime.fromisoformat(heartbeat.read_text().strip())).total_seconds()
-    state = json.loads((RUNTIME / "jobs.json").read_text()) if (RUNTIME / "jobs.json").exists() else {}
+        age = (datetime.now(timezone.utc) - datetime.fromisoformat(heartbeat.read_text(encoding="utf-8").strip())).total_seconds()
+    state = json.loads((RUNTIME / "jobs.json").read_text(encoding="utf-8")) if (RUNTIME / "jobs.json").exists() else {}
     disk = shutil.disk_usage(ROOT)
+    vault_path = ROOT / "runs/Vault_S2_full/progress.json"
+    vault = json.loads(vault_path.read_text(encoding="utf-8")) if vault_path.exists() else None
+    if vault and vault.get("updated_at"):
+        vault["heartbeat_age_s"] = (datetime.now(timezone.utc) - datetime.fromisoformat(vault["updated_at"])).total_seconds()
     return {"heartbeat_age_s": age, "jobs": state, "disk_used_fraction": disk.used / disk.total,
-            "leaderboard": (ROOT / "LEADERBOARD.md").read_text() if (ROOT / "LEADERBOARD.md").exists() else "",
-            "alerts": (ROOT / "ALERTS.md").read_text().split("\n## ")[:6] if (ROOT / "ALERTS.md").exists() else []}
+            "vault_full_design": vault,
+            "leaderboard": (ROOT / "LEADERBOARD.md").read_text(encoding="utf-8") if (ROOT / "LEADERBOARD.md").exists() else "",
+            "alerts": (ROOT / "ALERTS.md").read_text(encoding="utf-8").split("\n## ")[:6] if (ROOT / "ALERTS.md").exists() else []}
 
 
 def main():
