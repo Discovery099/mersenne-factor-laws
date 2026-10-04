@@ -20,7 +20,7 @@ of checksums and restoration instructions. This command does not publish.
 
 ## Publication sequence
 
-1. Authenticate the local GitHub CLI as the intended owner, `zoom12112`.
+1. Authenticate the local GitHub CLI as the intended owner, `Discovery099`.
    Create the public `mersenne-factor-laws` repository without an initial
    README or licence commit, then push this branch with its full history.
    Do not squash or rebuild the preregistration history.
@@ -47,12 +47,9 @@ of checksums and restoration instructions. This command does not publish.
 
 ## Current access status
 
-The GitHub connector identifies `zoom12112` but exposes no repository-create,
-release-create or full-history push operation. The local `gh` CLI reported
-that it is not authenticated. The browser attempt to open GitHub's repository
-creation page timed out; Zenodo sign-in navigation also did not complete.
-Zenodo sign-in is required. These are access
-dependencies, not requests for new publication permission.
+The local GitHub CLI is authenticated as `Discovery099`. The public repository
+has been created at https://github.com/Discovery099/mersenne-factor-laws.
+Zenodo is signed in; repository integration and DOI publication remain pending.
 
 ## Official workflow references
 
