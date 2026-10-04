@@ -56,5 +56,6 @@ evidence. SOURCE.md pins the saved transcription's bytes. The historical
 is assumed. No census was rerun and all frozen experiment files are unchanged.
 Original code is MIT-licensed and the report is CC BY 4.0, with third-party
 exceptions retained. Citation metadata and a release package are prepared.
-Publication is authorized but awaits authenticated GitHub/Zenodo access; no
-repository URL or DOI is claimed. RELEASE.md records the remaining steps.
+Public repository: https://github.com/Discovery099/mersenne-factor-laws.
+Zenodo is connected to Discovery099 and repository preservation is enabled.
+Archival publication and the DOI remain pending. RELEASE.md records the steps.

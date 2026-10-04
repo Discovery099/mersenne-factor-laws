@@ -219,9 +219,11 @@ def build():
       'are excluded.','small')
 
     newpage();p('6. Code and data availability','h1')
-    p('Code, predictions, complete census outputs, certificates and this report are retained in the local '
-      'mersenne-factor-laws Git repository. No public repository URL or archive DOI is recorded in this '
-      'version; publication is prepared but awaits authenticated GitHub and Zenodo access. Original '
+    p('Code, predictions, complete census outputs, certificates and this report are available with full '
+      'Git history in the public repository '
+      '<link href="https://github.com/Discovery099/mersenne-factor-laws">'
+      'https://github.com/Discovery099/mersenne-factor-laws</link>. '
+      'Zenodo archival publication is in progress; no archive DOI is claimed yet. Original '
       'project code is MIT-licensed; this report and its LaTeX source are CC BY 4.0, copyright 2026 '
       'Chris Miki. Vendored GNU mini-gmp and third-party material retain their terms and notices '
       '(LICENSING.md). Citation and Zenodo metadata accompany the source.','small')

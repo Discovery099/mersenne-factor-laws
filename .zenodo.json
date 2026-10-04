@@ -7,6 +7,7 @@
   "access_right": "open",
   "license": "cc-by-4.0",
   "language": "eng",
+  "related_identifiers": [{"identifier": "https://github.com/Discovery099/mersenne-factor-laws", "relation": "isSupplementTo", "scheme": "url"}],
   "keywords": ["Mersenne numbers", "computational number theory", "Poisson-binomial distribution", "reproducibility"],
   "version": "p12-report-2026-10-04"
 }

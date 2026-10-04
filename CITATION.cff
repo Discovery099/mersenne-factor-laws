@@ -2,6 +2,7 @@ cff-version: 1.2.0
 message: "Please cite the technical report and the archived release when a DOI is assigned."
 title: "Exact Mersenne Factor Censuses and a Finite Bernoulli Multiplicity Model"
 type: software
+repository-code: "https://github.com/Discovery099/mersenne-factor-laws"
 authors:
   - family-names: Miki
     given-names: Chris
