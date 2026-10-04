@@ -27,7 +27,11 @@ The original exact-tool and v0.3 experiment source fingerprints remain unchanged
 
 The complete experiment and full Git history are available in the public
 [Discovery099/mersenne-factor-laws repository](https://github.com/Discovery099/mersenne-factor-laws).
-Zenodo archival publication is in progress; no archive DOI is claimed yet.
+The [archived report and release](https://doi.org/10.5281/zenodo.23129695)
+are published under Chris Miki's name. The
+[GitHub release](https://github.com/Discovery099/mersenne-factor-laws/releases/tag/p12-report-2026-10-04)
+preserves the original tag. A subsequent citation update adds the assigned DOI
+to the report; all research results, predictions and censuses remain unchanged.
 Original code is [MIT-licensed](LICENSE); the report and LaTeX source are
 [CC BY 4.0](LICENSE-REPORT.txt), copyright 2026 Chris Miki. Third-party source
 and external reviews retain their own rights and attribution. See

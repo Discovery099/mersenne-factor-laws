@@ -223,7 +223,10 @@ def build():
       'Git history in the public repository '
       '<link href="https://github.com/Discovery099/mersenne-factor-laws">'
       'https://github.com/Discovery099/mersenne-factor-laws</link>. '
-      'Zenodo archival publication is in progress; no archive DOI is claimed yet. Original '
+      'The archived release is citable at '
+      '<link href="https://doi.org/10.5281/zenodo.23129695">doi:10.5281/zenodo.23129695</link>. '
+      'This citation update adds the DOI assigned after the original release; the results, '
+      'frozen predictions and census files are unchanged. Original '
       'project code is MIT-licensed; this report and its LaTeX source are CC BY 4.0, copyright 2026 '
       'Chris Miki. Vendored GNU mini-gmp and third-party material retain their terms and notices '
       '(LICENSING.md). Citation and Zenodo metadata accompany the source.','small')

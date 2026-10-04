@@ -58,4 +58,6 @@ Original code is MIT-licensed and the report is CC BY 4.0, with third-party
 exceptions retained. Citation metadata and a release package are prepared.
 Public repository: https://github.com/Discovery099/mersenne-factor-laws.
 Zenodo is connected to Discovery099 and repository preservation is enabled.
-Archival publication and the DOI remain pending. RELEASE.md records the steps.
+Release p12-report-2026-10-04 is published; Zenodo DOI: 10.5281/zenodo.23129695.
+The citation update adds the assigned DOI without changing research results.
+RELEASE.md records the deposit and reproducibility package details.

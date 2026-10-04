@@ -1,58 +1,62 @@
-# P12 report release
+# P12 public release
 
-Prepared for Chris Miki on 4 October 2026. Publication is authorized by the
-user, but is not complete until the public repository, release and Zenodo
-record can all be opened and checked. No DOI has been invented or reserved.
+Author: Chris Miki. Published 4 October 2026.
 
-## Prepared contents
+- Repository: https://github.com/Discovery099/mersenne-factor-laws
+- Release: https://github.com/Discovery099/mersenne-factor-laws/releases/tag/p12-report-2026-10-04
+- Version DOI: https://doi.org/10.5281/zenodo.23129695
+- All-versions DOI: https://doi.org/10.5281/zenodo.23129694
 
-- Report: `output/pdf/P12_Chris_Miki.pdf`; editable source: `reports/P12_Chris_Miki.tex`.
-- Full supplied region 1 review: `data/sources/REVIEW_VAULT_S1_L001.md`.
-- Code licence: `LICENSE` (MIT); report licence: `LICENSE-REPORT.txt` (CC BY 4.0).
-- Attribution and exceptions: `LICENSING.md`.
-- Citation metadata: `CITATION.cff` and `.zenodo.json`, under Chris Miki's name.
-- Complete tracked census outputs, certificates, predictions and run records.
+The release tag identifies commit `b09ef3038253d5b6d1dc8096dab3c959bb560106`.
+Zenodo's GitHub integration archived that exact source snapshot. The original
+tag is retained. A subsequent citation update inserts the assigned DOI into
+the report and citation metadata; no research model, prediction, census or
+score changes. The separate PDF and complete reproducibility package identify
+that citation update through the package manifest and Git history. The
+original GitHub source ZIP remains identifiable as the earlier snapshot.
 
-After committing the reviewed artifacts, `python -m ops.package_release`
-creates `output/release/<commit>/mersenne-factor-laws-reproducibility.zip`.
-It contains a source ZIP, a full-history Git bundle, the report, a manifest
-of checksums and restoration instructions. This command does not publish.
+## Contents and licences
 
-## Publication sequence
+The release contains the report, editable LaTeX, code, frozen predictions,
+complete census outputs, certificates and external operator reviews. Original
+code is MIT-licensed; the report and its LaTeX source are CC BY 4.0. Vendored
+GNU mini-gmp and third-party source material keep their own terms. See
+`LICENSING.md`, `LICENSE` and `LICENSE-REPORT.txt`.
 
-1. Authenticate the local GitHub CLI as the intended owner, `Discovery099`.
-   Create the public `mersenne-factor-laws` repository without an initial
-   README or licence commit, then push this branch with its full history.
-   Do not squash or rebuild the preregistration history.
-2. Record the verified public repository URL in the report, README and
-   citation metadata. Commit it, regenerate the PDF and check the rendered pages.
-3. Sign in to Zenodo, connect GitHub and enable this repository before the
-   release. `.zenodo.json` takes precedence over `CITATION.cff` for the
-   GitHub integration; the record is a report accompanied by software and data.
-4. Prepare a tag and release using `release/NOTES.md`. A full-history Git
-   bundle must accompany the source archive because `ops.vault_report` checks
-   the original Git chronology. Verify that the archived record actually
-   contains the history bundle; do not assume GitHub release attachments are
-   automatically included in Zenodo's source archive. Upload the complete
-   reproducibility package separately if necessary.
-5. Wait for a successful Zenodo record and inspect its creator, title,
-   version, licences, files and DOI. Record the actual DOI in Section 6 and
-   citation metadata, rebuild and visually check the PDF. A changed PDF must
-   be included in a subsequent archived version or an appropriate draft before
-   publication; do not silently claim it is the unchanged PDF in an earlier
-   immutable deposit.
-6. Verify the public URLs, final report bytes, archive checksums, complete
-   Git history and the saved-artifact audit. A replay of the censuses is not
-   needed for this publication step.
+The region 1 review in `data/sources/REVIEW_VAULT_S1_L001.md` is a transcription
+of the user-supplied text, fingerprinted in `SOURCE.md`. It is attributed
+external evidence. Region 1 was not rerun for publication.
 
-## Current access status
+## Reproducibility package
 
-The local GitHub CLI is authenticated as `Discovery099`. The public repository
-has been created at https://github.com/Discovery099/mersenne-factor-laws.
-Zenodo is signed in; repository integration and DOI publication remain pending.
+After committing reviewed artifacts, `python -m ops.package_release` creates
+`output/release/<commit>/mersenne-factor-laws-reproducibility.zip`, containing
+a full-history Git bundle, source ZIP, report, SHA-256 manifest and restoration
+instructions. This local packaging command does not publish anything.
+
+GitHub's automatic source ZIP omits Git history. Use a full clone or restore
+the included bundle before running `python -m ops.vault_report`. This audit
+checks the saved experiment and frozen scores without enumerating factors.
+Full replay commands in `README.md` are separate and substantially more work.
+
+## Publication checks
+
+GitHub CLI publication used the user's `Discovery099` account. Zenodo's
+repository switch was enabled before the release. The public Zenodo record
+was checked for the title, Chris Miki as creator, report type, open access,
+CC BY 4.0 and the exact release source snapshot.
+
+The DOI update and complete history package are supplementary files to the
+original archived snapshot. Verify the final deposit's file list and compare
+checksums with the package manifest; a DOI alone does not prove an attachment
+has been deposited. Local verification records accompany the prepared package.
+
+Publication now supplies a public timestamp for this release. It does not
+retroactively supply the missing external pre-run prediction receipt for
+the region 2 experiment.
 
 ## Official workflow references
 
-- [Enable a GitHub repository in Zenodo](https://help.zenodo.org/docs/github/enable-repository/).
-- [Zenodo metadata precedence](https://help.zenodo.org/docs/github/describe-software/).
-- [Archive a release from GitHub](https://help.zenodo.org/docs/github/archive-software/github-upload/).
+- https://help.zenodo.org/docs/github/enable-repository/
+- https://help.zenodo.org/docs/github/archive-software/github-upload/
+- https://help.zenodo.org/docs/deposit/manage-files/
