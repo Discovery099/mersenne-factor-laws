@@ -10,3 +10,5 @@ ops/runtime/
 HEARTBEAT
 data/private/
 discovery/private/
+output/release/
+tmp/pdfs/

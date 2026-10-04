@@ -25,10 +25,10 @@ All laws and prediction/source hashes are unchanged. Never refit and retest
 on these observed bands. The old L002_open_demo remains underpowered and
 failed; its immutable evidence and the original v0.3 sources are preserved.
 
-SOURCE.md records the external region 1 review statement and the post-commit
-user-relayed estimates. Actual SEEDS_P12_P13_full_records.md and
-REVIEW_VAULT_S1_L001.md files still need accessible paths. The launch and P13
-brief are different documents. Track 0 original-semantics reproduction is pending.
+SOURCE.md records the supplied external region 1 review and the post-commit
+user-relayed estimates. The review text was received on 2026-10-04 and saved
+in data/sources/REVIEW_VAULT_S1_L001.md. SEEDS_P12_P13_full_records.md is still
+missing. Track 0 original-semantics reproduction remains pending.
 
 GIMPS assignments exist per the operator; sanitized assignment/client details
 and a future CPU/time cap remain pending. No external submission, assignment
@@ -47,11 +47,14 @@ External review: data/sources/Vault_S2_operator_confirmation_2026-10-03.json. SO
 The two closeout report tests pass, including rejection of a mismatched external attestation.
 No further P12 census, model fitting, P15 experiment or market action was launched.
 The built-in LaTeX compiler failed at host setup; a separately typeset ReportLab PDF is provided.
-The missing original seed/review files remain unresolved legacy inputs, not claimed completed work.
+The missing original seed records remain an unresolved legacy input.
 
-Report revision, 2026-10-04: a separate region 1 section attributes the earlier
-hash-match statement and historical multiplicity observations to their saved
-sources. The named region 1 review is still missing. The report and README
-now include a code/data map and separate saved-audit and computational-replay
-instructions. No public repository URL or archive DOI is recorded, and no
-project-wide reuse licence has been declared. No new census was performed.
+Report revision, 2026-10-04: Section 5 transcribes the supplied review's region
+1 census hash, 72.01/209.98 deviances, 137.97 gain and qualifications as external
+evidence. SOURCE.md pins the saved transcription's bytes. The historical
+138.15 versus 137.97 difference remains unresolved; no rounding explanation
+is assumed. No census was rerun and all frozen experiment files are unchanged.
+Original code is MIT-licensed and the report is CC BY 4.0, with third-party
+exceptions retained. Citation metadata and a release package are prepared.
+Publication is authorized but awaits authenticated GitHub/Zenodo access; no
+repository URL or DOI is claimed. RELEASE.md records the remaining steps.

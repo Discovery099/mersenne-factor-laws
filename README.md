@@ -5,10 +5,10 @@ records exact counts, the externally reported region 2 match, the missing
 external pre-run timestamp, model comparisons and residuals. Editable source:
 [reports/P12_Chris_Miki.tex](reports/P12_Chris_Miki.tex).
 
-The 4 October revision adds a separate region 1 provenance section and a
-code-and-data statement. Region 1's hash match and two historical observations
-are attributed to the messages recorded in `SOURCE.md`; the actual
-`REVIEW_VAULT_S1_L001.md` file is still pending. No census was rerun for this revision.
+The 4 October revision includes the full supplied region 1 review, saved in
+`data/sources/REVIEW_VAULT_S1_L001.md` with its SHA-256 recorded in `SOURCE.md`.
+Section 5 transcribes its census hash, 72.01 versus 209.98 deviances and
+137.97 gain, with explicit external-review qualifications. No census was rerun.
 
 Exact Python + C verification, independent exhaustive censuses, immutable
 certificates, preregistered predictions, and bounded resumable jobs.
@@ -25,11 +25,15 @@ The original exact-tool and v0.3 experiment source fingerprints remain unchanged
 
 ## Code and data availability
 
-The complete experiment is retained in this local Git repository. No public
-repository URL or archive DOI is recorded in this revision. Public access is
-pending; this statement does not claim that readers can already download a
-published deposit. No project-wide reuse licence is declared. The vendored
-GNU mini-gmp files retain their upstream licence texts in `vendor/`.
+The complete experiment is retained in this local Git repository. Publication
+is prepared; authenticated GitHub and Zenodo access is still required. No
+public repository URL or archive DOI is claimed until publication is verified.
+Original code is [MIT-licensed](LICENSE); the report and LaTeX source are
+[CC BY 4.0](LICENSE-REPORT.txt), copyright 2026 Chris Miki. Third-party source
+and external reviews retain their own rights and attribution. See
+[LICENSING.md](LICENSING.md) for the scope and vendored GNU mini-gmp terms.
+`CITATION.cff` and `.zenodo.json` provide the release's citation metadata.
+The prepared release procedure is in [RELEASE.md](RELEASE.md).
 
 Reproducibility materials:
 

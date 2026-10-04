@@ -1,0 +1,43 @@
+{
+  "bounds": [
+    1000000,
+    10000000,
+    100000
+  ],
+  "kind": "user-supplied-external-review-transcription",
+  "local_rerun": false,
+  "operator_identity_independently_verified": false,
+  "qualifications": [
+    "Saved SHA-256 identifies a UTF-8 transcription of supplied chat text, not original attachment bytes.",
+    "Historical v0.2 commits and independent code were not independently checked in this checkout.",
+    "The 0.18 difference between 138.15 and 137.97 is unresolved; it is not asserted to be rounding.",
+    "Noise, sigma and repulsion interpretations are external commentary, not adopted calibrated tests.",
+    "The later prospective power gate is not retroactively assigned to region 1.",
+    "Known prior art; no new-law or credited-factor claim."
+  ],
+  "received_date": "2026-10-04",
+  "reported_cells": {
+    "at_least_one": 240726,
+    "at_least_two": 56673,
+    "total": 307582
+  },
+  "reported_census_sha256": "119c03fad32551ef1d7abf2c8e66db6a4b344004948316e7091c0605e73a6a47",
+  "reported_computation_date": "2026-10-02",
+  "reported_deviances": {
+    "L001": 72.01,
+    "N0": 209.98
+  },
+  "reported_fitted_parameters": 0,
+  "reported_gain": 137.97,
+  "reported_historical_threshold": 14,
+  "reported_independent_engine": "mcensus.c",
+  "reported_multiplicity_gain": 128.0,
+  "reported_prediction_commit": "2c87791",
+  "reported_prediction_sha256_prefix": "edec3781",
+  "reported_result_commit": "b1d0925",
+  "review_date": "2026-10-03",
+  "schema": 1,
+  "sealed_file_independently_inspected": false,
+  "source_path": "data/sources/REVIEW_VAULT_S1_L001.md",
+  "source_sha256": "a7034bece8433bb925dd8bb4f9c6c9bb2ad5749fd1b03d9144151cface85063b"
+}

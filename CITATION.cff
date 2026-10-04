@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "Please cite the technical report and the archived release when a DOI is assigned."
+title: "Exact Mersenne Factor Censuses and a Finite Bernoulli Multiplicity Model"
+type: software
+authors:
+  - family-names: Miki
+    given-names: Chris
+abstract: >-
+  Bounded exact Mersenne factor censuses and a zero-fit comparison of established
+  multiplicity heuristics. Two independent engines counted 487025 factor pairs
+  over prime exponents from 10000001 through 30000000 with k at most 10000.
+  External operator reviews confirm both sealed census comparisons. The report
+  distinguishes the independent reviews from locally certified results and
+  documents a residual discrepancy and a missing external pre-run timestamp
+  for region 2. No new theorem, law or credited factor is claimed.
+keywords:
+  - Mersenne numbers
+  - computational number theory
+  - Poisson-binomial distribution
+  - reproducibility
+license: MIT
+preferred-citation:
+  type: report
+  title: "Exact Mersenne Factor Censuses and a Finite Bernoulli Multiplicity Model"
+  authors:
+    - family-names: Miki
+      given-names: Chris
+  year: 2026
+  month: 10

@@ -45,19 +45,36 @@ Novelty state: **overlap-found**. This is not an expert-reviewed distinction.
 11. [GNU GMP 6.3.0 source archive](https://ftp.gnu.org/gnu/gmp/gmp-6.3.0.tar.xz).
     mini-gmp C/header and upstream license texts are pinned in `vendor/`;
     `vendor/PROVENANCE.json` records archive and file SHA-256 hashes.
-12. **External operator review, Vault-S region 1 (2026-10-03).** Source:
-    the operator's message in this chat, naming `REVIEW_VAULT_S1_L001.md`.
-    The operator states that the v0.2 census SHA-256 matched the sealed
-    region 1 hash exactly and that L001 was scored against the sealed values.
-    This is an externally reported confirmation, not a new local rerun or an
-    independently inspected review document. The named Markdown attachment
-    is not yet accessible; document bytes, SHA-256, precise scores and any
-    reviewer qualifications are pending receipt. No numeric score or pass/fail
-    verdict is inferred from the statement. Region 1 has not been rerun for
-    this request and must not be used for fitting L003.
-    Access rechecked on 2026-10-04: the named document was not found in the
-    project or Downloads. The revised report gives this relayed confirmation
-    its own section, without presenting the missing review as inspected.
+12. **[External operator review, Vault-S region 1](data/sources/REVIEW_VAULT_S1_L001.md).**
+    Review dated 2026-10-03; its full text was supplied in the user's message
+    on 2026-10-04 and saved as a UTF-8 transcription with LF line endings.
+    Saved-file SHA-256:
+    `a7034bece8433bb925dd8bb4f9c6c9bb2ad5749fd1b03d9144151cface85063b`.
+    This pins the supplied text, not the bytes of a separately obtained original
+    attachment. It supersedes the earlier missing-document status.
+    The operator reports independent `mcensus.c` computation on 2026-10-02
+    before task issue: 307582 factors, prime p in [1000000,10000000], k <=100000,
+    census SHA-256 `119c03fad32551ef1d7abf2c8e66db6a4b344004948316e7091c0605e73a6a47`,
+    matching the agent's census exactly. Reported A1=240726 and A2=56673.
+    Independently reported deviances: L001=72.01, N0=209.98, gain=137.97;
+    multiplicity contributes 128.00 of the gain. The operator calls this a
+    historical threshold pass with zero fitted parameters and no novelty:
+    L001 is prior art, not a newly discovered law. The later prospective
+    separation rule is not retrospectively assigned to this earlier test.
+    The review reports matches for five earlier certificates (46, 215, 520,
+    5773, 138) and historical v0.2 commits 2c87791 at 10:04 (predictions;
+    abbreviated prediction SHA `edec3781...`) and b1d0925 at 10:19 (outcomes).
+    These historical commits, independent code, original sealed files and
+    operator identity were not independently checked in this checkout.
+    The full prediction SHA cannot be recovered from its reported prefix.
+    The review calls 137.97 a rounding match to 138.15; their 0.18 difference
+    is not explained by its displayed two-decimal scores and remains unresolved.
+    The review's sigma, Poisson-noise and possible repulsion interpretations
+    are attributed commentary, not calibrated tests adopted by this report.
+    Its proposed next experiment is a historical recommendation, not a new
+    instruction to run or fit a law. Region 1 was not rerun and no frozen
+    prediction was changed. Structured transcription:
+    [Vault_S1_operator_confirmation.json](data/sources/Vault_S1_operator_confirmation.json).
 13. [Hong, On computing the distribution function for the Poisson binomial
     distribution (2013)](https://www.sciencedirect.com/science/article/pii/S0167947312003568).
     Publisher abstract inspected on 2026-10-03 for the independent,

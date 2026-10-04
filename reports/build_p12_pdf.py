@@ -18,6 +18,11 @@ from mf.protocol import ROOT, digest
 def build():
     audit_path=ROOT/'results/Vault_S2_full/audit.json'
     audit=json.loads(audit_path.read_text(encoding='utf-8'))
+    region1=json.loads((ROOT/'data/sources/Vault_S1_operator_confirmation.json').read_text(encoding='utf-8'))
+    assert region1['source_sha256']==digest(ROOT/region1['source_path'])
+    assert region1['source_sha256']=='a7034bece8433bb925dd8bb4f9c6c9bb2ad5749fd1b03d9144151cface85063b'
+    assert region1['reported_deviances']=={'L001':72.01,'N0':209.98}
+    assert region1['reported_gain']==137.97 and region1['local_rerun'] is False
     assert audit['external_review']['attestation']['operator_reports_exact_hash_match']
     assert audit['external_review']['attestation']['external_prediction_receipt_before_computation'] is False
     records=audit['records']; r2=records['sealed_region_2']; full=records['enlarged_design']
@@ -153,6 +158,43 @@ def build():
       'residual is ordinary noise. No law was refitted after observing these outcomes.','small')
 
     newpage();p('5. Sealed comparisons and provenance','h1')
+    p('Region 1: external operator review','h2')
+    p('The review dated 3 October 2026 reports that independent mcensus.c computations on 2 October, '
+      'before issue of the task, gave 307,582 factors for prime exponents 10<super>6</super> ≤ p ≤ 10<super>7</super> '
+      'and k ≤ 10<super>5</super>, '
+      'matching the agent\'s census exactly. The fingerprint and scores below are transcribed from '
+      'that external review; they are not a local recertification. Region 1 was not rerun.')
+    p('<b>Operator-reported region 1 census SHA-256</b>','small')
+    p('119c03fad32551ef1d7abf2c8e66db6a4b344004948316e7091c0605e73a6a47','mono')
+    table([['External review cell','Observed','L001','N0'],
+           ['A₁','240,726','239,185.7','236,588.9'],
+           ['A₂','56,673','57,396.1','58,761.5'],
+           ['Multiplicity deviance','-','19.05','147.05'],
+           ['All registered cells: deviance','-','72.01','209.98']],[180,85,95,95])
+    p('The overall gain is <b>137.97</b>, above the historical threshold of 14 with zero fitted '
+      'parameters; 128.00 comes from the two multiplicity cells. The operator reports a total-factor '
+      'error of at most seven and no discernible advantage on the count partitions. Its verdict '
+      'confirms L001 as prior art, with no novelty. The report does not adopt the review\'s Poisson-noise '
+      'or approximately three-sigma interpretations as calibrated tests. The prospective separation '
+      'gate in section 3 belongs to the later region 2 design, not retrospectively to region 1.')
+    p('The review also reports matches for five earlier certificates: 46, 215, 520, 5,773 and 138. '
+      'Its historical ordering check places predictions/vaultS.json (abbreviated SHA-256 edec3781...) '
+      'in commit 2c87791 at 10:04, and the census and scores in b1d0925 at 10:19. These are externally '
+      'reported v0.2 records, not commits independently checked in this checkout; the abbreviated '
+      'prediction fingerprint is not expanded by inference.','small')
+    p('<b>Qualification.</b> The review calls 137.97 a rounding match to an earlier 138.15. Their 0.18 '
+      'difference is not explained by the displayed two-decimal scores; it is left unresolved, and '
+      '137.97 is transcribed as the operator\'s result. The proposed repulsion explanation and next '
+      'experiment are historical commentary. Later L003 results and section 2\'s prior-art '
+      'qualification govern this report\'s conclusions.','small')
+    p('The full supplied review text is saved as data/sources/REVIEW_VAULT_S1_L001.md '
+      '(SOURCE.md, item 12). Its UTF-8 transcription has SHA-256:','small')
+    p('a7034bece8433bb925dd8bb4f9c6c9bb2ad5749fd1b03d9144151cface85063b','mono')
+    p('This fingerprints the text supplied in chat, not an independently obtained withheld dataset '
+      'or original attachment byte stream. Operator identity, independent code and sealed files '
+      'were not independently verified here.','small')
+    newpage();p('5. Sealed comparisons and provenance (continued)','h1')
+    p('Region 2 chronology and fingerprints','h2')
     p('The local record places prediction commitment at 18:40:13 UTC on 3 October 2026, before the '
       'census began at approximately 18:59 UTC. The user authorized the full design after receiving the '
       'fingerprint in this chat. Models, predictions, scoring and prospective bounds stayed fixed. '
@@ -162,17 +204,7 @@ def build():
       'hash and all four cells: 250,614 factors, A₁ = 206,852, A₂ = 38,568 and maximum 5. '
       'The local agent did not inspect the original withheld file or independently establish the '
       'operator\'s identity.')
-    p('Earlier region 1: reported confirmation','h2')
-    p('The user previously relayed that an independent operator matched the v0.2 region 1 census '
-      'hash to the sealed hash exactly and scored L001 against withheld values. SOURCE.md, item 12, '
-      'records this external statement. The named document REVIEW_VAULT_S1_L001.md remains unavailable '
-      'to this checkout as of 4 October 2026, so its full hash, exact score and review qualifications '
-      'cannot be transcribed or independently checked here. Region 1 was not rerun.')
-    p('A separate post-commit note reports region 1 observations A₁ = 240,726 and A₂ = 56,673 '
-      '(SOURCE.md, item 15). These are attributed historical observations, not locally recertified '
-      'results; the note\'s approximate L003 estimates are not a preregistered region 1 test. '
-      'None of these estimates entered the frozen region 2 predictions.')
-    p('<b>Protocol qualification.</b> The operator reports that the prediction fingerprint was not relayed '
+    p('<b>Region 2 protocol qualification.</b> The operator reports that the prediction fingerprint was not relayed '
       'to them before computation. Prediction-first ordering has local Git and execution evidence, '
       'but no independently witnessed pre-run receipt. The later outcome match does not repair this '
       'missing timestamp. Future sealed tests should obtain a dated custodian receipt for the exact '
@@ -189,8 +221,10 @@ def build():
     newpage();p('6. Code and data availability','h1')
     p('Code, predictions, complete census outputs, certificates and this report are retained in the local '
       'mersenne-factor-laws Git repository. No public repository URL or archive DOI is recorded in this '
-      'version; public access remains pending. No project-wide reuse licence is declared; vendored GNU '
-      'mini-gmp retains its accompanying upstream licence texts.','small')
+      'version; publication is prepared but awaits authenticated GitHub and Zenodo access. Original '
+      'project code is MIT-licensed; this report and its LaTeX source are CC BY 4.0, copyright 2026 '
+      'Chris Miki. Vendored GNU mini-gmp and third-party material retain their terms and notices '
+      '(LICENSING.md). Citation and Zenodo metadata accompany the source.','small')
     p('Reproducibility materials','h2')
     p('<b>Code:</b> mf/, laws/, ops/ and tests/ contain both checkers, both engines, models, runner and validation. '
       '<b>Protocol:</b> REGISTRATION.md and POWER_PROTOCOL.md document the design; the frozen prediction '
@@ -252,6 +286,7 @@ def build():
               'author':reader.metadata.author,'audit_sha256':digest(audit_path),
               'prediction_sha256':audit['registration']['prediction_sha256'],
               'companion_latex_sha256':digest(ROOT/'reports/P12_Chris_Miki.tex'),
+              'region_1_review_sha256':digest(ROOT/'data/sources/REVIEW_VAULT_S1_L001.md'),
               'pdf_backend':'ReportLab','latex_compilation':'unavailable: built-in host could not find standard directories',
               'visual_review':'pending'}
     (ROOT/'reports/P12_build_record.json').write_text(json.dumps(evidence,sort_keys=True,indent=2)+'\n')

@@ -1,0 +1,12 @@
+{
+  "title": "Exact Mersenne Factor Censuses and a Finite Bernoulli Multiplicity Model",
+  "creators": [{"name": "Miki, Chris"}],
+  "description": "<p>Technical report and reproducibility materials for the bounded P12 experiment. Two independent exhaustive programs counted 487,025 factor pairs for prime exponents 10,000,001 through 30,000,000 and k at most 10,000. External operator reviews report exact sealed census matches in region 1 and region 2. The report transcribes the region 1 scores, compares fixed Poisson and Poisson-binomial multiplicity models on region 2 and its extension, and records a residual discrepancy and the lack of an external pre-run prediction timestamp for region 2. No new theorem, law or credited factor is claimed.</p><p>The report and its LaTeX source are CC BY 4.0. Original project code is MIT-licensed; vendored GNU mini-gmp and third-party material retain their own terms, as detailed in LICENSING.md. The deposit includes the raw census outputs and recorded evidence; provenance checks require full Git history, supplied separately as a Git bundle in the reproducibility package.</p>",
+  "upload_type": "publication",
+  "publication_type": "report",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "language": "eng",
+  "keywords": ["Mersenne numbers", "computational number theory", "Poisson-binomial distribution", "reproducibility"],
+  "version": "p12-report-2026-10-04"
+}
