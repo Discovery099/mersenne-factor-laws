@@ -37,7 +37,7 @@ def package():
     source = directory/'source.zip'
     if bundle.exists() or source.exists():
         raise RuntimeError('This commit already has a package; retain the existing artifacts')
-    git('bundle', 'create', str(bundle), branch)
+    git('bundle', 'create', str(bundle), branch, 'HEAD')
     subprocess.run(['git', '-C', str(ROOT), 'bundle', 'verify', str(bundle)], check=True)
     git('archive', '--format=zip', '--output='+str(source), commit)
     names = git('ls-tree', '-r', '--name-only', commit).decode().splitlines()
@@ -61,7 +61,7 @@ def package():
         'The report is CC BY 4.0; original code is MIT. See LICENSING.md\n'
         'in source.zip for third-party exceptions. SHA-256 values are in MANIFEST.json.\n\n'
         'To restore the full source tree AND the original Git ancestry:\n'
-        '  git clone history.bundle mersenne-factor-laws\n'
+        f'  git clone --branch {branch} history.bundle mersenne-factor-laws\n'
         '  cd mersenne-factor-laws\n'
         '  python -m ops.vault_report\n\n'
         'Python 3.10+ and Git are required for this saved-artifact audit.\n'
